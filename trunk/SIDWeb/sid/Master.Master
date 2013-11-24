@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="sid.Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>SID</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td colspan="2">
+                    <h1>Sistema Integrado de Distribución</h1>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 150px;">
+                    <asp:Menu ID="Menu1" runat="server">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/RegistroFormula.aspx" Text="Fórmula de proyección" 
+                                Value="Fórmula de proyección"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/EjecucionProyeccion.aspx" 
+                                Text="Proyección de Pauta" Value="Proyección de Pauta"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                </td>
+            </tr>        
+        </table>
+    </div>
+    </form>
+</body>
+</html>
