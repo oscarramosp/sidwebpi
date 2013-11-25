@@ -6,20 +6,21 @@
 <head runat="server">
     <title>SID</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body style="width:100%;">
     <form id="form1" runat="server">
     <div>
         <table border="0" cellpadding="0" cellspacing="0" width="100%">
             <tr>
-                <td colspan="2">
+                <td colspan="2" style="height: 120px; ">
                     <h1>Sistema Integrado de Distribución</h1>
                 </td>
             </tr>
             <tr>
-                <td style="width: 150px;">
+                <td style="width: 200px; height: 500px; vertical-align: top;">
                     <asp:Menu ID="Menu1" runat="server">
                         <Items>
                             <asp:MenuItem NavigateUrl="~/RegistroFormula.aspx" Text="Fórmula de proyección" 
@@ -49,7 +50,15 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td align="left">
+                    <p>&copy; Grupo El Comercio 2013</p>
+                </td>
+                <td align="right">
+                    <p>
+                        <a href="http://validator.w3.org/check?uri=referer"><img
+                          src="http://www.w3.org/Icons/valid-xhtml10"
+                          alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+                    </p> 
                 </td>
             </tr>        
         </table>

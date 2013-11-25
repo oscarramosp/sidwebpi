@@ -107,6 +107,7 @@
     <None Include="fonts\glyphicons-halflings-regular.svg" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="css\custom.css" />
     <Content Include="EjecucionProyeccion.aspx" />
     <Content Include="main.aspx" />
     <Content Include="Master.Master" />
