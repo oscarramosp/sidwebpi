@@ -107,6 +107,7 @@
     <Compile Include="RegistroFormula.aspx.designer.cs">
       <DependentUpon>RegistroFormula.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Util\SessionHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BELayer\BELayer.csproj">
@@ -125,6 +126,11 @@
     <None Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="css\custom.css" />
     <Content Include="EjecucionProyeccion.aspx" />
+    <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\moog.custom.alert.js" />
+    <Content Include="js\sidd.js" />
+    <Content Include="js\util.js" />
     <Content Include="main.aspx" />
     <Content Include="Master.Master" />
     <Content Include="RegistroFormula.aspx" />

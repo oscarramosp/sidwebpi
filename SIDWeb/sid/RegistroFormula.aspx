@@ -50,22 +50,36 @@
         <tr>
             <td style="width:15px">
             </td>
-            <td style="height:350px;">
+            <td style="height:350px; vertical-align:top;"">
                 <table border="0px" cellpadding="0px" cellspacing="0px" width="100%">
                     <tr>
                         <td style="width:25%;">
-                            asd
+                            Operadores
                         </td>
                         <td style="width:25%;">
-                            asd
+                            Variables
+                        </td>
+                        <td style="width:50%;">
                         </td>
                     </tr>
                     <tr>
                         <td style="width:25%;">
-                            asd
+                            <asp:DropDownList ID="ddlOperadores" runat="server" AutoPostBack="True" Width="220px"
+                                onselectedindexchanged="ddlOperadores_SelectedIndexChanged"></asp:DropDownList>
                         </td>
                         <td style="width:25%;">
-                            asd
+                        </td>
+                        <td style="width:50%;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:25%;">
+                            <asp:listbox id="lstOperadores" runat="server" Width="220px" CssClass="etiqueta" Height="130px"></asp:listbox>
+                        </td>
+                        <td style="width:25%;">
+                            <asp:listbox id="lstVariables" runat="server" Width="220px" CssClass="etiqueta" Height="130px"></asp:listbox>
+                        </td>
+                        <td style="width:50%;">
                         </td>
                     </tr>
                 </table>
@@ -76,7 +90,8 @@
                 <table border="0px" cellpadding="0px" cellspacing="0px" width="100%" style="height:100%">
                     <tr>
                         <td style="background-color:#F0C41B; height:100%;" align="center">
-                            <asp:Button ID="btnGrabarFx" runat="server" Text="Grabar" />
+                            <asp:Button ID="btnGrabarFx" runat="server" Text="Grabar" 
+                                onclick="btnGrabarFx_Click" />
                         </td>
                     </tr>
                 </table>
