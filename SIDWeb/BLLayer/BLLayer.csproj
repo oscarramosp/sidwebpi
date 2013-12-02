@@ -62,7 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLEmpresa.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="DTOResultado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
