@@ -82,6 +82,11 @@
                         <td style="width:50%;">
                         </td>
                     </tr>
+                    <tr>
+                        <td colspan="3" style="width:100%; height:30px; vertical-align:middle;" align="center">
+                            <asp:Label id="lblMensaje" runat="server" CssClass="etiqueta" />
+                        </td>
+                    </tr>
                 </table>
             </td>
         </tr>
@@ -100,7 +105,34 @@
     </table>
     <script type="text/javascript">
         $(document).ready(function() {
+            $("#<%= btnGrabarFx.ClientID %>").click(function() {
+                return validar();
+            });
+        });
 
-        });        
+        function validar() {
+            var formula = $.trim($("#<%= txtEditor.ClientID %>").val());
+            var mensaje = '';
+
+            if (formula == '')
+                mensaje += "<li>La fórmula no puede estar en blanco.</li>";
+
+            if (mensaje != '') {
+                mensaje = '<ul>' + mensaje + '</ul>';
+                jcAlert('Datos Incompletos', mensaje, function(choice) { return choice });
+                return false;
+            }
+
+            jcConfirm('Actualizar Formula', '¿Desea actualizar la fórmula?', function(choice) {
+
+                if (choice) {
+                    var event = "<%= btnGrabarFx.ClientID %>";
+                    event = event.replace(/_/g, "$");
+                    __doPostBack(event, '');
+                }
+            });
+
+            return false;
+        }   
     </script>
 </asp:Content>
