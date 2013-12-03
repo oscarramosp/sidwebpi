@@ -10,8 +10,11 @@ namespace BLLayer
         public enum CodigoGrabarFormula
         {
             Ok = 0,
-            ErrorSintaxis = -1,
-            Error = -2
+            ErrorSintaxis = 2,
+            Error = -2,
+            ErrorReferenciaCircular = 1,
+            ErrorDivisionporCero = 3
+
         }
     }
 }

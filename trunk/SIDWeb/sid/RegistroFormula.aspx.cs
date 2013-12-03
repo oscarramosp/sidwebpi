@@ -20,9 +20,8 @@ namespace sid
         {
             if (!Page.IsPostBack)
             {
-                cargarOperadores();
-                cargarVariables();
-                asignarEventosJS();
+                setControles();
+                cargarDatosFormula();
             }
         }
 
@@ -42,24 +41,52 @@ namespace sid
 
             if (oDTOResultado.Codigo != (int)Constantes.CodigoGrabarFormula.Ok)
             {
-                if (oDTOResultado.Codigo == (int)Constantes.CodigoGrabarFormula.ErrorSintaxis)
+                if (oDTOResultado.Codigo == (int)Constantes.CodigoGrabarFormula.ErrorReferenciaCircular)
                 {
-                    //error sintaxis
+                    lblMensaje.Text = "La formula de proyección no puede contener la cantidad de pautas proyectadas";
+                }
+                else if (oDTOResultado.Codigo == (int)Constantes.CodigoGrabarFormula.ErrorDivisionporCero)
+                {
+                    lblMensaje.Text = "La fórmula ingresada cuenta una divisón por cero (0). Por favor, validar";
+                }
+                else if (oDTOResultado.Codigo == (int)Constantes.CodigoGrabarFormula.ErrorSintaxis)
+                {
+                    lblMensaje.Text = "La fórmula ingresada cuenta con un error de sintaxis. Por favor, validar";
                 }
                 else
                 {
-                    //error general
+                    oDTOResultado.Codigo = (int)Constantes.CodigoGrabarFormula.Error;
                 }
             }
             else
             {
-                //mensaje grabar ok
+                lblMensaje.Text = "Fórmula actualizada exitosamente";
                 Util.SessionHelper.setFormulaEditar(objFormula);
             }
         }
         #endregion
         
         #region "METODOS---------------------"
+        protected void setControles()
+        {
+            cargarOperadores();
+            cargarVariables();
+            asignarEventosJS();
+        }
+
+        protected void cargarDatosFormula()
+        {
+            var formula = new BEFormula();
+            formula.codigoFormula = ConfigurationManager.AppSettings["fx"].ToString();
+            formula = oBLFormula.obtenerFormula(formula);
+
+            Util.SessionHelper.setFormulaEditar(formula);
+
+            txtCodigoFormula.Text = formula.codigoFormula;
+            txtCodigoFormula.Enabled = false;
+            txtEditor.Text = formula.formula;
+        }
+
         protected void cargarOperadores()
         {
             string[] strIdOperadores = ConfigurationManager.AppSettings["idOperadores"].Split(',');
@@ -104,7 +131,7 @@ namespace sid
         protected void asignarEventosJS()
         {
             lstOperadores.Attributes.Add("OndblClick", "GetValue('" + lstOperadores.ClientID + "','" + txtEditor.ClientID + "','','');");
-            lstVariables.Attributes.Add("OndblClick", "GetValue('" + lstVariables.ClientID + "','" + txtEditor.ClientID + "','$','$');");
+            lstVariables.Attributes.Add("OndblClick", "GetValue('" + lstVariables.ClientID + "','" + txtEditor.ClientID + "','','');");
         }
         #endregion
     }
