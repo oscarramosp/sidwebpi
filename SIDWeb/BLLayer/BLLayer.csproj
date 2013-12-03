@@ -62,7 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLEmpresa.cs" />
+    <Compile Include="BLFormula.cs" />
     <Compile Include="BLGeneral.cs" />
+    <Compile Include="Constantes.cs" />
     <Compile Include="DTOResultado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

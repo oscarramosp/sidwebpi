@@ -13,6 +13,8 @@ namespace sid
 {
     public partial class RegistroFormula : System.Web.UI.Page
     {
+        BLFormula oBLFormula = new BLFormula();
+
         #region "EVENTOS---------------------"
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,8 +36,26 @@ namespace sid
             var objFormula = Util.SessionHelper.getFormulaEditar();
 
             objFormula.formula = txtEditor.Text.Trim();
+            var oDTOResultado = oBLFormula.grabarFormula(objFormula);
 
-            
+            objFormula = (BEFormula)oDTOResultado.Objeto;
+
+            if (oDTOResultado.Codigo != (int)Constantes.CodigoGrabarFormula.Ok)
+            {
+                if (oDTOResultado.Codigo == (int)Constantes.CodigoGrabarFormula.ErrorSintaxis)
+                {
+                    //error sintaxis
+                }
+                else
+                {
+                    //error general
+                }
+            }
+            else
+            {
+                //mensaje grabar ok
+                Util.SessionHelper.setFormulaEditar(objFormula);
+            }
         }
         #endregion
         
