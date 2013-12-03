@@ -13,7 +13,6 @@ namespace DALayer
         {
             Database db = DatabaseFactory.CreateDatabase();
             System.Data.Common.DbCommand dbCommand = db.GetStoredProcCommand("SP_LISTAR_COLUMNAS_OBJETO");
-
             db.AddInParameter(dbCommand, "@VC_NOMBRE_OBJETO", DbType.String, general.nombreObjeto);
             db.AddInParameter(dbCommand, "@VC_TIPO_DATO", DbType.String, general.tipoDato);
 
