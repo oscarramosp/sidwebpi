@@ -23,6 +23,15 @@ namespace sid {
         protected global::System.Web.UI.ScriptManager smFiltros;
         
         /// <summary>
+        /// upCalendario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upCalendario;
+        
+        /// <summary>
         /// clnFecha control.
         /// </summary>
         /// <remarks>
@@ -32,13 +41,22 @@ namespace sid {
         protected global::System.Web.UI.WebControls.Calendar clnFecha;
         
         /// <summary>
-        /// lblSinResultados control.
+        /// spnMensaje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSinResultados;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spnMensaje;
+        
+        /// <summary>
+        /// divResultado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divResultado;
         
         /// <summary>
         /// dgvPauta control.

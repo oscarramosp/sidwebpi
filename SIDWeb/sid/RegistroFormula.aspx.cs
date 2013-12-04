@@ -39,30 +39,40 @@ namespace sid
 
             objFormula = (BEFormula)oDTOResultado.Objeto;
 
+            var strMensaje = string.Empty;
+            var strClass = string.Empty;
+
             if (oDTOResultado.Codigo != (int)Constantes.CodigoGrabarFormula.Ok)
             {
                 if (oDTOResultado.Codigo == (int)Constantes.CodigoGrabarFormula.ErrorReferenciaCircular)
                 {
-                    lblMensaje.Text = "La formula de proyección no puede contener la cantidad de pautas proyectadas";
+                    strMensaje = "La formula de proyección no puede hacer referencia a la cantidad de pautas proyectadas";
+                    strClass = "alert alert-warning";
                 }
                 else if (oDTOResultado.Codigo == (int)Constantes.CodigoGrabarFormula.ErrorDivisionporCero)
                 {
-                    lblMensaje.Text = "La fórmula ingresada cuenta una divisón por cero (0). Por favor, validar";
+                    strMensaje = "La fórmula ingresada cuenta con una divisón por cero (0). Por favor, validar";
+                    strClass = "alert alert-warning";
                 }
                 else if (oDTOResultado.Codigo == (int)Constantes.CodigoGrabarFormula.ErrorSintaxis)
                 {
-                    lblMensaje.Text = "La fórmula ingresada cuenta con un error de sintaxis. Por favor, validar";
+                    strMensaje = "La fórmula ingresada cuenta con un error de sintaxis. Por favor, validar";
+                    strClass = "alert alert-warning";
                 }
                 else
                 {
-                    oDTOResultado.Codigo = (int)Constantes.CodigoGrabarFormula.Error;
+                    strMensaje = "La fórmula ingresada cuenta con un error de sintaxis. Por favor, validar";
+                    strClass = "alert alert-warning";
                 }
             }
             else
             {
-                lblMensaje.Text = "Fórmula actualizada exitosamente";
+                strMensaje = "Fórmula actualizada exitosamente";
                 Util.SessionHelper.setFormulaEditar(objFormula);
+                strClass = "alert alert-success";
             }
+            spnMensaje.Attributes["class"] = strClass;
+            spnMensaje.InnerText = strMensaje;
         }
         #endregion
         

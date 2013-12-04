@@ -68,13 +68,13 @@ namespace sid {
         protected global::System.Web.UI.WebControls.ListBox lstVariables;
         
         /// <summary>
-        /// lblMensaje control.
+        /// spnMensaje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensaje;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spnMensaje;
         
         /// <summary>
         /// btnGrabarFx control.

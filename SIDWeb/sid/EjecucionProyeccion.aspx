@@ -7,36 +7,22 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <asp:ScriptManager ID="smFiltros" runat="server">
     </asp:ScriptManager>
-    <table border="0px" cellpadding="0px" cellspacing="0px" width="100%">
-        <tr>
-            <td style="width:15px">
-            </td>
-            <td>
-                <table border="0px" cellpadding="0px" cellspacing="0px" width="100%">
-                    <tr>
-                        <td style="width:200px;">
-                            Fecha a proyectar
-                        </td>
-                        <td>                            
-                            <asp:Calendar ID="clnFecha" runat="server" 
-                                onselectionchanged="clnFecha_SelectionChanged"></asp:Calendar>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td style="height:30px;" colspan="2">
-            </td>
-        </tr>
-        <tr>
-            <td style="width:15px">
-            </td>
-            <td>
-                <table border="0px" cellpadding="0px" cellspacing="0px" width="100%">
-                    <tr>
-                        <td>
-                            <asp:Label ID="lblSinResultados" CssClass="strong" runat="server" Visible="false"></asp:Label>
+    <asp:UpdatePanel ID="upCalendario" runat="server" UpdateMode="Conditional">
+        <ContentTemplate>
+            <div class="form-group">
+                <label for='<%=clnFecha.ClientID%>' class="col-sm-3 control-label">Código de fórmula</label>
+                <div class="col-sm-9">
+                    <asp:Calendar ID="clnFecha" runat="server" 
+                        onselectionchanged="clnFecha_SelectionChanged"></asp:Calendar>
+                </div>
+            </div>
+            <div class="form-group">
+                <div id="spnMensaje" runat="server"></div>
+            </div>
+            <div class="form-group">
+                <div class=" col-sm-offset-1 col-sm-11">
+                    <div id="divResultado" runat="server">
+                        <div style="overflow: auto; min-height:250px; max-height: 300px;">
                             <asp:GridView id="dgvPauta" runat="server" AutoGenerateColumns="False" Width="670px"
                                 BorderColor="#ECECEC" BorderStyle="Solid" ShowHeader="true">
                                 <Columns>
@@ -54,31 +40,25 @@
                                     </asp:BoundField>
                                 </Columns>
                             </asp:GridView>
-                        </td>
-                    </tr>
-                </table>
-            </td>            
-        </tr>
-        <tr>
-            <td style="height:30px;" colspan="2">
-            </td>
-        </tr>
-        <tr>
-            <td style="height:100px;" colspan="2">
-                <table border="0px" cellpadding="0px" cellspacing="0px" width="100%" style="height:100%">
-                    <tr>
-                        <td style="background-color:#F0C41B; height:100%;" align="center">
-                            <asp:Button ID="btnProyectarPauta" runat="server" Text="Proyectar pauta" 
-                                onclick="btnProyectarPauta_Click"/>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ContentTemplate>
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="clnFecha" EventName="SelectionChanged" />
+            <asp:PostBackTrigger ControlID="btnProyectarPauta" />
+        </Triggers>
+    </asp:UpdatePanel>
+    <div class="form-group">
+        <div class="col-sm-offset-5 col-sm-7">
+            <asp:Button ID="btnProyectarPauta" runat="server" Text="Proyectar pauta" 
+                onclick="btnProyectarPauta_Click" class="btn btn-default"/>
+        </div>
+    </div>
     <script type="text/javascript">
         $(document).ready(function() {
-            
+
         });
     </script>
 </asp:Content>

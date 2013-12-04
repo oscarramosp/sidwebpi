@@ -90,3 +90,75 @@
 {
     font-weight: bold;
 }
+
+.footer-links {
+  margin: 10px 0;
+  padding-left: 0;
+}
+
+.footer-links li {
+  display: inline;
+  padding: 0 2px;
+}
+
+.footer-links li:first-child {
+  padding-left: 0;
+}
+
+.bs-docs-home,
+.bs-header {
+  color: #000000;
+  background-color: #F0C41B
+}
+
+.bs-footer {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  margin-top: 100px;
+  color: #777;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
+
+.bs-sidebar .nav > div > span > a {
+  display: block;
+  color: #716b7a;
+  padding: 5px 20px;
+}
+
+.bs-sidebar .nav > div > span > a:hover,
+.bs-sidebar .nav > div > span > a:focus {
+  text-decoration: none;
+  background-color: #e5e3e9;
+  border-right: 1px solid #dbd8e0;
+}
+
+.bs-sidebar .nav > .active > div > span > a,
+.bs-sidebar .nav > .active:hover > div > span > a,
+.bs-sidebar .nav > .active:focus > div > span > a {
+  font-weight: bold;
+  color: #563d7c;
+  background-color: transparent;
+  border-right: 1px solid #563d7c;
+}
+
+.bs-sidebar .nav a {
+  padding-top:    3px;
+  padding-bottom: 3px;
+  padding-left: 30px;
+  font-size: 100%;
+}
+
+.bs-sidebar.affix {
+  position: static;
+}
+
+.bs-sidenav {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top:    10px;
+  padding-bottom: 10px;
+  text-shadow: 0 1px 0 #fff;
+  background-color: #f7f5fa;
+  border-radius: 5px;
+}
