@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BELayer
 {
-    public class BEGeneral
+    public class BEGeneral : BEBase
     {
         public string nombreObjeto { get; set; }
         public string tipoDato { get; set; }

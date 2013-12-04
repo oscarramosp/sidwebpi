@@ -65,6 +65,7 @@
     <Compile Include="DAEmpresa.cs" />
     <Compile Include="DAFormula.cs" />
     <Compile Include="DAGeneral.cs" />
+    <Compile Include="DAPauta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
