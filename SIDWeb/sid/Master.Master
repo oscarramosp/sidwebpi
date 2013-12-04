@@ -5,19 +5,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head id="Head1" runat="server">
     <title>SID</title>
-    <link href="css/jquery-ui-1.10.2.custom.min.css" rel="Stylesheet"/>
-    <link href="css/custom.css" rel="Stylesheet"/>
-    <link href="css/bootstrap.min.css" rel="Stylesheet"/>
-    <link href="css/bootstrap-theme.min.css" rel="Stylesheet"/>
-    <script type="text/javascript" src="js/jquery-ui.js"></script>
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/util.js"></script>
     <script type="text/javascript" src="js/moog.custom.alert.js"></script>
     <script type="text/javascript" src="js/sidd.js"></script>
+    <link href="css/jquery-ui.css" rel="Stylesheet"/>
+    <link href="css/custom.css" rel="Stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="Stylesheet"/>
+    <link href="css/bootstrap-theme.min.css" rel="Stylesheet"/>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body style="width:100%;">
+<body>
+    <form id="form1" runat="server" class="form-horizontal" role="form">
     <div class="bs-header" id="content">
         <div class="container">
             <h1>Sistema Integrado de Distribución</h1>
@@ -45,10 +45,8 @@
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">        
                         </asp:ContentPlaceHolder>
                     </div>
-                    <form id="form1" runat="server" class="form-horizontal" role="form">
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">        
-                        </asp:ContentPlaceHolder>
-                    </form>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">        
+                    </asp:ContentPlaceHolder>
                 </div>
             </div>
         </div>
@@ -68,5 +66,6 @@
             </ul>
         </div>
     </footer>   
+    </form>
 </body>
 </html>
