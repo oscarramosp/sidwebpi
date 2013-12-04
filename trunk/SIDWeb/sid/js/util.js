@@ -1,4 +1,5 @@
-﻿function esFechaValida(strValue) {
+﻿//a
+function esFechaValida(strValue) {
     var objRegExp = /^([0-9]){2}(\/|-){1}([0-9]){2}(\/|-)([0-9]){4}$/;
     if (!objRegExp.test(strValue)) {
         return false;

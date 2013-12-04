@@ -9,7 +9,7 @@
 //		jcAlert = function (titulo, mensaje, callback)
 //		jcConfirm = function (titulo, mensaje, callback)
 // 
-// Licencia:
+// Licencia:a
 // 
 // Este plugin está licenciado bajo GNU General Public License
 //

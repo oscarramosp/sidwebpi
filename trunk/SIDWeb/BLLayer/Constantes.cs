@@ -16,5 +16,12 @@ namespace BLLayer
             ErrorDivisionporCero = 3
 
         }
+
+        public enum CodigoProyectarPauta
+        {
+            Ok = 0,
+            Error = -1
+
+        }
     }
 }

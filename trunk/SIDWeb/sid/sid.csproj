@@ -141,6 +141,7 @@
     <Content Include="css\images\ui-icons_ffd27a_256x240.png" />
     <Content Include="css\images\ui-icons_ffffff_256x240.png" />
     <Content Include="css\jquery-ui-1.10.2.custom.min.css" />
+    <Content Include="css\jquery-ui.css" />
     <Content Include="EjecucionProyeccion.aspx" />
     <Content Include="js\jquery-1.10.2.min.js" />
     <Content Include="js\jquery-ui.js" />

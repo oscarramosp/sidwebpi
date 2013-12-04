@@ -31,7 +31,27 @@ namespace sid
 
         protected void btnProyectarPauta_Click(object sender, EventArgs e)
         {
+            var pauta = new BEPauta();
+            pauta.fechaPauta = clnFecha.SelectedDate;
 
+            var oDTOResultado = oBLPauta.proyectarPautas(pauta);
+
+            pauta = (BEPauta)oDTOResultado.Objeto;
+            var strMensaje = string.Empty;
+            var strClass = string.Empty;
+
+            if (oDTOResultado.Codigo != (int)Constantes.CodigoProyectarPauta.Ok)
+            {
+                strMensaje = "Ocurrió un error durante el cálculo de la proyección";
+                strClass = "alert alert-warning";
+            }
+            else
+            {
+                strMensaje = "Pautas proyectadas exitosamente";
+                strClass = "alert alert-success";
+            }
+            spnMensaje.Attributes["class"] = strClass;
+            spnMensaje.InnerText = strMensaje;
         }
         #endregion
 

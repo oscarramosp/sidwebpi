@@ -1,4 +1,5 @@
-﻿function GetValue(y, z, l, r) {
+﻿//a
+function GetValue(y, z, l, r) {
     box = document.getElementById(y);
     x = '';
     if (l == '#') {
