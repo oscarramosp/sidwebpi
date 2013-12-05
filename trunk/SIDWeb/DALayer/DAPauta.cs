@@ -37,5 +37,41 @@ namespace DALayer
             }
             return listaPautas;
         }
+
+        public Int32 validarProyectarPauta(ref BEPauta pauta)
+        {
+            Database db = DatabaseFactory.CreateDatabase();
+            System.Data.Common.DbCommand dbCommand = db.GetStoredProcCommand("SP_VALIDAR_PROYECTAR_PAUTA");
+            Int32 intCodigoError = 0;
+
+            IDbDataParameter myParam = dbCommand.CreateParameter();
+            myParam.DbType = DbType.Int32;
+            myParam.ParameterName = "@IN_CODIGO_ERROR";
+            myParam.Direction = ParameterDirection.InputOutput;
+            myParam.Value = intCodigoError;
+            dbCommand.Parameters.Add(myParam);
+
+            db.AddInParameter(dbCommand, "@DT_FECHA_PAUTA", DbType.DateTime, pauta.fechaPauta);
+            db.AddOutParameter(dbCommand, "@DT_MIN_INICIO_R", DbType.DateTime, 8);
+            db.AddOutParameter(dbCommand, "@DT_MAX_INICIO_R", DbType.DateTime, 8);
+
+            db.ExecuteNonQuery(dbCommand);
+
+            intCodigoError = Convert.ToInt32(myParam.Value);
+            pauta.horaInicioMin = Convert.ToDateTime(dbCommand.Parameters["@DT_MIN_INICIO_R"].Value);
+            pauta.horaInicioMax = Convert.ToDateTime(dbCommand.Parameters["@DT_MAX_INICIO_R"].Value);
+
+            return intCodigoError;
+        }
+
+        public void proyectarPautas(BEPauta pauta, System.Data.Common.DbTransaction mTransaction)
+        {
+            Database db = DatabaseFactory.CreateDatabase();
+            System.Data.Common.DbCommand dbCommandWrapper = db.GetStoredProcCommand("SP_PROYECTAR_PAUTA");
+
+            db.AddInParameter(dbCommandWrapper, "@DT_FECHA_PAUTA", DbType.Date, pauta.fechaPauta);
+
+            db.ExecuteNonQuery(dbCommandWrapper, mTransaction);
+        }
     }
 }

@@ -44,25 +44,22 @@ namespace sid
 
             if (oDTOResultado.Codigo != (int)Constantes.CodigoGrabarFormula.Ok)
             {
+                strClass = "alert alert-warning";
                 if (oDTOResultado.Codigo == (int)Constantes.CodigoGrabarFormula.ErrorReferenciaCircular)
                 {
                     strMensaje = "La formula de proyección no puede hacer referencia a la cantidad de pautas proyectadas";
-                    strClass = "alert alert-warning";
                 }
                 else if (oDTOResultado.Codigo == (int)Constantes.CodigoGrabarFormula.ErrorDivisionporCero)
                 {
                     strMensaje = "La fórmula ingresada cuenta con una divisón por cero (0). Por favor, validar";
-                    strClass = "alert alert-warning";
                 }
                 else if (oDTOResultado.Codigo == (int)Constantes.CodigoGrabarFormula.ErrorSintaxis)
                 {
                     strMensaje = "La fórmula ingresada cuenta con un error de sintaxis. Por favor, validar";
-                    strClass = "alert alert-warning";
                 }
                 else
                 {
                     strMensaje = "La fórmula ingresada cuenta con un error de sintaxis. Por favor, validar";
-                    strClass = "alert alert-warning";
                 }
             }
             else

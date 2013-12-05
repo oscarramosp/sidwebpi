@@ -14,6 +14,8 @@ namespace BELayer
         public string codigoProducto { get; set; }
         public string descripcionProducto { get; set; }
         public DateTime? fechaPauta { get; set; }
+        public DateTime? horaInicioMin { get; set; }
+        public DateTime? horaInicioMax { get; set; }
         public Int32 cantidadSolicitada { get; set; }
         public Int32 cantidadProyectada { get; set; }
         public Int32 cantidadSugerida { get; set; }

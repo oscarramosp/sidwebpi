@@ -14,14 +14,15 @@ namespace BLLayer
             Error = -2,
             ErrorReferenciaCircular = 1,
             ErrorDivisionporCero = 3
-
         }
 
         public enum CodigoProyectarPauta
         {
             Ok = 0,
-            Error = -1
-
+            Error = -1,
+            FechaProyeccionIncorrecta = -2,
+            FueraDeHorario = -3,
+            FormulaNoDefinida = -4
         }
     }
 }
