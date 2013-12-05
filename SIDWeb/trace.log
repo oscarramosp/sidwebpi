@@ -696,3 +696,902 @@ Thread Name:
 Win32 ThreadId:5632
 
 ----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:18:34 a.m.
+
+Message: HandlingInstanceID: d97ebe23-3f47-42a1-b7ae-daed87b12841
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+12/05/2013 03:18:34
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Procedure or function SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS has too many arguments specified.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 0
+Number : 8144
+Procedure : SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS
+Server : .
+State : 2
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 70
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:18:34 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-2-130307050979824030
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-2-130307050979824030
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:5684
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:19:36 a.m.
+
+Message: HandlingInstanceID: db3d3689-811d-405c-88f8-9a8079ec39e1
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+12/05/2013 03:19:36
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Procedure or function SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS has too many arguments specified.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 0
+Number : 8144
+Procedure : SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS
+Server : .
+State : 2
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 70
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:19:36 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-2-130307050979824030
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-2-130307050979824030
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:9700
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:20:39 a.m.
+
+Message: HandlingInstanceID: 79ad832b-c5ce-4240-a836-6fd69a6d6c02
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+12/05/2013 03:20:39
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Procedure or function SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS has too many arguments specified.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 0
+Number : 8144
+Procedure : SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS
+Server : .
+State : 2
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 70
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:20:39 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-3-130307052089617507
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-3-130307052089617507
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:9700
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:22:01 a.m.
+
+Message: HandlingInstanceID: e14f7ad3-e7eb-4310-bfdb-8784faa97fd5
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+12/05/2013 03:22:01
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Procedure or function SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS has too many arguments specified.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 0
+Number : 8144
+Procedure : SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS
+Server : .
+State : 2
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 70
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:22:01 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-4-130307053128086904
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-4-130307053128086904
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:9700
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:23:40 a.m.
+
+Message: HandlingInstanceID: 2c39a62b-0506-4248-858a-41ac31bc4361
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+12/05/2013 03:23:40
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Procedure or function SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS has too many arguments specified.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 0
+Number : 8144
+Procedure : SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS
+Server : .
+State : 2
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 70
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:23:40 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-5-130307053579652732
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-5-130307053579652732
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:9732
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:30:10 a.m.
+
+Message: HandlingInstanceID: e46e8cd7-4541-4e51-a9e4-50f7103df7b7
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+12/05/2013 03:30:10
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Procedure or function SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS has too many arguments specified.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 0
+Number : 8144
+Procedure : SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS
+Server : .
+State : 2
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 70
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:30:10 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-6-130307057947402553
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-6-130307057947402553
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:7428
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:31:09 a.m.
+
+Message: HandlingInstanceID: 8803827a-3402-4d16-b6df-0bbc25fddd80
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+12/05/2013 03:31:09
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Procedure or function SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS has too many arguments specified.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 0
+Number : 8144
+Procedure : SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS
+Server : .
+State : 2
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 70
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:31:09 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-6-130307057947402553
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-6-130307057947402553
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:6596
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:31:16 a.m.
+
+Message: HandlingInstanceID: 1468f2fb-1daa-4c99-a4d2-b35a77171222
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+12/05/2013 03:31:16
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Procedure or function SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS has too many arguments specified.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 0
+Number : 8144
+Procedure : SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS
+Server : .
+State : 2
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 70
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:31:16 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-6-130307057947402553
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-6-130307057947402553
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:5872
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:33:47 a.m.
+
+Message: HandlingInstanceID: c9cec1c4-7c0f-4bfa-9d79-9ac5a8c71104
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+12/05/2013 03:33:47
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Procedure or function SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS has too many arguments specified.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 0
+Number : 8144
+Procedure : SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS
+Server : .
+State : 2
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 70
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:33:47 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-7-130307060126507191
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-7-130307060126507191
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:8868
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:34:02 a.m.
+
+Message: HandlingInstanceID: c5115c6f-636a-445e-94e6-8c68ccf65ac1
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+12/05/2013 03:34:02
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Procedure or function SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS has too many arguments specified.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 0
+Number : 8144
+Procedure : SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS
+Server : .
+State : 2
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 70
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:34:02 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-7-130307060126507191
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-7-130307060126507191
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:5872
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:35:22 a.m.
+
+Message: HandlingInstanceID: 931fe798-a271-4b23-90fb-2250ad15c465
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+12/05/2013 03:35:22
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Procedure or function SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS has too many arguments specified.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 0
+Number : 8144
+Procedure : SP_LISTAR_PAUTAS_AGRUPA_PRODUCTOS
+Server : .
+State : 2
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 70
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:35:22 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-7-130307060126507191
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-7-130307060126507191
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:6596
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:35:59 a.m.
+
+Message: HandlingInstanceID: 7936657c-011a-4023-a34c-6121382cd380
+An exception of type 'System.InvalidCastException' occurred and was caught.
+---------------------------------------------------------------------------
+12/05/2013 03:35:59
+Type : System.InvalidCastException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : No se puede convertir un objeto de tipo 'System.Data.SqlClient.SqlParameter' al tipo 'System.IConvertible'.
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.DateTime ToDateTime(System.Object)
+Stack Trace :    en System.Convert.ToDateTime(Object value)
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 73
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:35:59 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-8-130307061297284155
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-8-130307061297284155
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:5872
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:36:33 a.m.
+
+Message: HandlingInstanceID: 10b01ea0-b15e-4183-9918-b970f0d8d3db
+An exception of type 'System.InvalidCastException' occurred and was caught.
+---------------------------------------------------------------------------
+12/05/2013 03:36:33
+Type : System.InvalidCastException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : No se puede convertir un objeto de tipo 'System.Data.SqlClient.SqlParameter' al tipo 'System.IConvertible'.
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.DateTime ToDateTime(System.Object)
+Stack Trace :    en System.Convert.ToDateTime(Object value)
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 73
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:36:33 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-8-130307061297284155
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-8-130307061297284155
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:6596
+
+----------------------------------------
+----------------------------------------
+Timestamp: 05/12/2013 08:37:21 a.m.
+
+Message: HandlingInstanceID: 8f389698-d228-4a8c-ad2b-8ae860188a27
+An exception of type 'System.InvalidCastException' occurred and was caught.
+---------------------------------------------------------------------------
+12/05/2013 03:37:21
+Type : System.InvalidCastException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : No se puede convertir un objeto DBNull en otros tipos.
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : System.DateTime System.IConvertible.ToDateTime(System.IFormatProvider)
+Stack Trace :    en System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   en System.Convert.ToDateTime(Object value)
+   en DALayer.DAPauta.validarProyectarPauta(BEPauta& pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\DALayer\DAPauta.cs:línea 73
+   en BLLayer.BLPauta.proyectarPautas(BEPauta pauta) en D:\Fuentes\SIDWeb\sidwebpi\SIDWeb\BLLayer\BLPauta.cs:línea 37
+
+Additional Info:
+
+MachineName : WINDOWS7-PC
+TimeStamp : 05/12/2013 08:37:21 a.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : f780e819-9-130307062089349459
+ThreadIdentity : Windows7-PC\Windows  7
+WindowsIdentity : Windows7-PC\Windows  7
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WINDOWS7-PC
+
+App Domain: f780e819-9-130307062089349459
+
+ProcessId: 6832
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:8824
+
+----------------------------------------

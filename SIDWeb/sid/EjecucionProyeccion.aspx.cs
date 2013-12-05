@@ -34,6 +34,9 @@ namespace sid
             var pauta = new BEPauta();
             pauta.fechaPauta = clnFecha.SelectedDate;
 
+            pauta.fechaPauta = pauta.fechaPauta.Value.AddHours(DateTime.Now.Hour);
+            pauta.fechaPauta = pauta.fechaPauta.Value.AddMinutes(DateTime.Now.Minute);
+
             var oDTOResultado = oBLPauta.proyectarPautas(pauta);
 
             pauta = (BEPauta)oDTOResultado.Objeto;
@@ -42,16 +45,34 @@ namespace sid
 
             if (oDTOResultado.Codigo != (int)Constantes.CodigoProyectarPauta.Ok)
             {
-                strMensaje = "Ocurrió un error durante el cálculo de la proyección";
                 strClass = "alert alert-warning";
+                if (oDTOResultado.Codigo == (int)Constantes.CodigoProyectarPauta.FechaProyeccionIncorrecta)
+                {
+                    strMensaje = "La fecha a proyectar debe ser mayor a la fecha actual";
+                }
+                else if (oDTOResultado.Codigo == (int)Constantes.CodigoProyectarPauta.FueraDeHorario)
+                {
+                    strMensaje = "La proyección sólo se puede ejecutar entre la(s) " + pauta.horaInicioMin.Value.ToShortTimeString() + " y la(s) " + pauta.horaInicioMax.Value.ToShortTimeString();
+                }
+                else if (oDTOResultado.Codigo == (int)Constantes.CodigoProyectarPauta.FormulaNoDefinida)
+	            {
+                    strMensaje = "No se ha definido la fórmula de proyección";
+	            }
+                else
+	            {
+                    strMensaje = "Ocurrió un error al proyectar las pautas";
+	            }
             }
             else
             {
+                cargarPautasFecha();
                 strMensaje = "Pautas proyectadas exitosamente";
                 strClass = "alert alert-success";
             }
             spnMensaje.Attributes["class"] = strClass;
             spnMensaje.InnerText = strMensaje;
+            spnMensaje.Visible = true;
+            //upCalendario.Update();
         }
         #endregion
 
