@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DABase.cs" />
+    <Compile Include="DACanilla.cs" />
     <Compile Include="DAEmpresa.cs" />
     <Compile Include="DAFormula.cs" />
     <Compile Include="DAGeneral.cs" />

@@ -46,6 +46,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Recursos\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WebForms\9.0.0.0__b03f5f7f11d50a3a\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core">
@@ -78,6 +82,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSets\Canillas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Canillas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EjecucionProyeccion.aspx.cs">
       <DependentUpon>EjecucionProyeccion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -107,6 +116,13 @@
     <Compile Include="RegistroFormula.aspx.designer.cs">
       <DependentUpon>RegistroFormula.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReporteCanillas.aspx.cs">
+      <DependentUpon>ReporteCanillas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteCanillas.aspx.designer.cs">
+      <DependentUpon>ReporteCanillas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Util\SessionHelper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +136,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSets\Canillas.xsc">
+      <DependentUpon>Canillas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Canillas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Canillas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Canillas.xss">
+      <DependentUpon>Canillas.xsd</DependentUpon>
+    </None>
     <None Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="fonts\glyphicons-halflings-regular.svg" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -151,6 +178,10 @@
     <Content Include="main.aspx" />
     <Content Include="Master.Master" />
     <Content Include="RegistroFormula.aspx" />
+    <Content Include="ReporteCanillas.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reportes\rptCanillas.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
