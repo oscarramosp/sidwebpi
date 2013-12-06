@@ -34,6 +34,8 @@
                                     Value="Fórmula de proyección"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/EjecucionProyeccion.aspx" 
                                     Text="Proyección de Pauta" Value="Proyección de Pauta"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ReporteCanillas.aspx" Text="Reporte de canillas" 
+                                    Value="Reporte de canillas"></asp:MenuItem>
                             </Items>
                         </asp:Menu>
                     </ul>

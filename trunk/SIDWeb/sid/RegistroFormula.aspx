@@ -17,7 +17,7 @@
         <label for='<%=txtEditor.ClientID%>' class="col-sm-3 control-label">Definición de fórmula</label>
         <div class="col-sm-9">
             <asp:textbox id="txtEditor" runat="server" Width="600px" BorderColor="#999999" CssClass="form-control"
-				BorderWidth="1px" TextMode="MultiLine" Height="160"></asp:textbox>
+				BorderWidth="1px" TextMode="MultiLine" Height="167"></asp:textbox>
         </div>
     </div>
     <div class="form-group">

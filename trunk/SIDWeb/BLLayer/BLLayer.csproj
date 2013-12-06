@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLCanilla.cs" />
     <Compile Include="BLEmpresa.cs" />
     <Compile Include="BLFormula.cs" />
     <Compile Include="BLGeneral.cs" />
