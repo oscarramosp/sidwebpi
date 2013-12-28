@@ -19,7 +19,7 @@
             <div class="form-group">
                 <div class=" col-sm-offset-1 col-sm-11">
                     <div id="divResultado" runat="server">
-                        <div style="overflow: auto; min-height:250px; max-height: 300px;">
+                        <div style="overflow: auto; min-height:185px; max-height: 250px;">
                             <asp:GridView id="dgvPauta" runat="server" AutoGenerateColumns="False" Width="670px"
                                 BorderColor="#ECECEC" BorderStyle="Solid" ShowHeader="true">
                                 <Columns>
