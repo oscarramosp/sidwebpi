@@ -82,6 +82,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsultaCanillas.aspx.cs">
+      <DependentUpon>ConsultaCanillas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaCanillas.aspx.designer.cs">
+      <DependentUpon>ConsultaCanillas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataSets\Canillas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -151,6 +158,7 @@
     <None Include="fonts\glyphicons-halflings-regular.svg" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="ConsultaCanillas.aspx" />
     <Content Include="css\custom.css" />
     <Content Include="css\images\animated-overlay.gif" />
     <Content Include="css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
