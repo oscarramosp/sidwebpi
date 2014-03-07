@@ -18,5 +18,10 @@ namespace DALayer
             ds.Tables[0].TableName = "DataTable1";
             return db.ExecuteDataSet(dbCommand);
         }
+
+        public List<BECanilla> selectCanillas(BECanilla canilla)
+        {
+            return null;
+        }
     }
 }

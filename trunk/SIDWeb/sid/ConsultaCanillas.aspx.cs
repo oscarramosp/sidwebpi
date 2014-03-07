@@ -22,12 +22,16 @@ namespace sid
                 setControles();
             }
         }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion
         #region "METODOS-----------------------------------"
         protected void setControles()
         {
             cargarTiposDocumento();
-            asignarEventosJS();
         }
 
         protected void cargarTiposDocumento()
@@ -42,11 +46,6 @@ namespace sid
             var liSeleccione = new ListItem("Todos", "0");
             ddlTipoDocumento.Items.Insert(0, liSeleccione);
             ddlTipoDocumento.DataBind();
-        }
-
-        protected void asignarEventosJS()
-        {
-            //btnCerrar.Attributes.Add("OnClick", "window.close();");
         }
         #endregion
     }
