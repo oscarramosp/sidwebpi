@@ -16,6 +16,8 @@
 </head>
 <body>
     <form id="form1" runat="server" class="form-horizontal" role="form">
+    <asp:ScriptManager ID="smFiltros" runat="server">
+    </asp:ScriptManager>
     <div class="container bs-docs-container">
         <div class="row">
             <div class="col-md-12" role="main">
@@ -76,9 +78,24 @@
                 <div class="form-group">
                     <div id="spnMensaje" runat="server"></div>
                 </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-5 col-sm-7">
+                        <asp:Button ID="btnCerrar" runat="server" Text="Cerrar" class="btn btn-default" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#<%= btnCerrar.ClientID %>").click(function() {
+                return cerrar();
+            });
+            function cerrar() {
+                window.close();
+            }
+        });
+    </script>
     </form>
 </body>
 </html>
