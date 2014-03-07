@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BEBase.cs" />
+    <Compile Include="BECanilla.cs" />
     <Compile Include="BEFormula.cs" />
     <Compile Include="BEGeneral.cs" />
     <Compile Include="BEPauta.cs" />

@@ -43,7 +43,8 @@
                             <asp:TextBox ID="txtNumeroDocumento" runat="server" Width="200px" CssClass="form-control"></asp:TextBox>
                         </div>
 						<div class="col-sm-1">
-							<asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-default"/>
+							<asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-default" 
+                                onclick="btnBuscar_Click"/>
 						</div>
                     </div>
                 </fieldset>
@@ -60,10 +61,10 @@
                                         <asp:BoundField DataField="nombreCompletoCanilla" HeaderText="Nombre del canilla">
                                             <ItemStyle HorizontalAlign="Left" Width="220px"/>
                                         </asp:BoundField>
-                                        <asp:BoundField DataField="documento.tipoDocumento" HeaderText="Tipo documento">
+                                        <asp:BoundField DataField="tipoDocumento" HeaderText="Tipo documento">
                                             <ItemStyle HorizontalAlign="Left" Width="150px"/>
                                         </asp:BoundField>
-                                        <asp:BoundField DataField="documento.numeroDocumento" HeaderText="Número documento">
+                                        <asp:BoundField DataField="numeroDocumento" HeaderText="Número documento">
                                             <ItemStyle HorizontalAlign="Left" Width="150px"/>
                                         </asp:BoundField>
 									    <asp:BoundField DataField="agencia.nombreAgencia" HeaderText="Agencia">
@@ -81,6 +82,7 @@
                 <div class="form-group">
                     <div class="col-sm-offset-5 col-sm-7">
                         <asp:Button ID="btnCerrar" runat="server" Text="Cerrar" class="btn btn-default" />
+                        <a id="btnCerrar2" data-role="button">Cerrar</a>
                     </div>
                 </div>
             </div>
@@ -89,6 +91,9 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $("#<%= btnCerrar.ClientID %>").click(function() {
+                return cerrar();
+            });
+            $("#btnCerrar2").click(function() {
                 return cerrar();
             });
             function cerrar() {
