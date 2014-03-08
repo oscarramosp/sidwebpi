@@ -36,7 +36,7 @@ namespace sid
             rptVwCanillas.ShowExportControls = true;
             rptVwCanillas.ShowRefreshButton = false;
             var canillas = new DataSets.Canillas();
-            canillas.Tables[0].Merge(oBLCanilla.listarCanillas().Tables[0]);
+            canillas.Tables[0].Merge(oBLCanilla.reporteCanillas().Tables[0]);
             ReportDataSource reportSource = new ReportDataSource("Canillas_DataTable1", canillas.Tables[0]);
             rptVwCanillas.LocalReport.DataSources.Clear();
             rptVwCanillas.LocalReport.DataSources.Add(reportSource);
