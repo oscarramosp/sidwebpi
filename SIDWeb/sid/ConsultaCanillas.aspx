@@ -67,7 +67,7 @@
                                         <asp:BoundField DataField="numeroDocumento" HeaderText="Número documento">
                                             <ItemStyle HorizontalAlign="Left" Width="150px"/>
                                         </asp:BoundField>
-									    <asp:BoundField DataField="agencia.nombreAgencia" HeaderText="Agencia">
+									    <asp:BoundField DataField="nombreAgencia" HeaderText="Agencia">
                                             <ItemStyle HorizontalAlign="Left" Width="150px"/>
                                         </asp:BoundField>
                                     </Columns>

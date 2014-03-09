@@ -51,6 +51,7 @@ namespace DALayer
                 canilla.fechaNacimiento = rdr.IsDBNull(rdr.GetOrdinal("DT_FECHA_NACIMIENTO_CANILLA")) ? new DateTime() : rdr.GetDateTime(rdr.GetOrdinal("DT_FECHA_NACIMIENTO_CANILLA"));
                 canilla.tipoCanilla = rdr.IsDBNull(rdr.GetOrdinal("CH_TIPO_CANILLA")) ? String.Empty : rdr.GetString(rdr.GetOrdinal("CH_TIPO_CANILLA"));
                 canilla.estadoRegistro = rdr.IsDBNull(rdr.GetOrdinal("CH_ESTADO_REGISTRO")) ? String.Empty : rdr.GetString(rdr.GetOrdinal("CH_ESTADO_REGISTRO"));
+                canilla.nombreAgencia = rdr.IsDBNull(rdr.GetOrdinal("VC_DESCRIPCION_AGENCIA")) ? String.Empty : rdr.GetString(rdr.GetOrdinal("VC_DESCRIPCION_AGENCIA"));
                 listaCanillas.Add(canilla);
             }
             return listaCanillas;

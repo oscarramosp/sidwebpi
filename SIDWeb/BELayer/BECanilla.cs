@@ -17,5 +17,7 @@ namespace BELayer
         public string numeroDocumento { get; set; }
         public DateTime? fechaNacimiento { get; set; }
         public string tipoCanilla { get; set; }
+
+        public string nombreAgencia { get; set; }
     }
 }
