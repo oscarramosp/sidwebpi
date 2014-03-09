@@ -13,6 +13,7 @@ namespace sid
 {
     public partial class ConsultaCanillas : System.Web.UI.Page
     {
+        BLCanilla oBlCanilla = new BLCanilla();
 
         #region "EVENTOS-----------------------------------"
         protected void Page_Load(object sender, EventArgs e)
@@ -25,7 +26,7 @@ namespace sid
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            buscarCanillas();
         }
         #endregion
         #region "METODOS-----------------------------------"
@@ -43,9 +44,45 @@ namespace sid
                 ddlTipoDocumento.Items.Add(new ListItem(strTiposDocumento[i], strTiposDocumento[i]));
             }
 
-            var liSeleccione = new ListItem("Todos", "0");
+            var liSeleccione = new ListItem("Todos", "");
             ddlTipoDocumento.Items.Insert(0, liSeleccione);
             ddlTipoDocumento.DataBind();
+        }
+
+        protected void buscarCanillas()
+        {
+            spnMensaje.Attributes["class"] = string.Empty;
+            spnMensaje.InnerText = string.Empty;
+            spnMensaje.Visible = false;
+
+            BECanilla canilla = new BECanilla();
+            canilla.codigoCanilla = txtCodigoCanilla.Text;
+            canilla.nombreCompletoCanilla = txtNombreCanilla.Text;
+            canilla.tipoDocumento = ddlTipoDocumento.SelectedValue;
+            canilla.numeroDocumento = txtNumeroDocumento.Text;
+            List<BECanilla> listaCanillas = oBlCanilla.selectCanillas(canilla);
+
+            var strMensaje = string.Empty;
+            var strClass = string.Empty;
+
+            if (listaCanillas.Count > 0)
+            {
+                dgvCanillas.DataSource = listaCanillas;
+                dgvCanillas.DataBind();
+                divResultado.Visible = true;
+            }
+            else
+            {
+                dgvCanillas.DataSource = null;
+                dgvCanillas.DataBind();
+                divResultado.Visible = false;
+                strMensaje = "No se han encontrado canillas";
+                strClass = "alert alert-warning";
+
+                spnMensaje.Attributes["class"] = strClass;
+                spnMensaje.InnerText = strMensaje;
+                spnMensaje.Visible = true;
+            }
         }
         #endregion
     }
