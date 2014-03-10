@@ -130,6 +130,13 @@
     <Compile Include="ReporteCanillas.aspx.designer.cs">
       <DependentUpon>ReporteCanillas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SolicitudPautas.aspx.cs">
+      <DependentUpon>SolicitudPautas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SolicitudPautas.aspx.designer.cs">
+      <DependentUpon>SolicitudPautas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Util\SessionHelper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -154,10 +161,10 @@
     <None Include="DataSets\Canillas.xss">
       <DependentUpon>Canillas.xsd</DependentUpon>
     </None>
-    <None Include="fonts\glyphicons-halflings-regular.eot" />
-    <None Include="fonts\glyphicons-halflings-regular.svg" />
-    <None Include="fonts\glyphicons-halflings-regular.ttf" />
-    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="ConsultaCanillas.aspx" />
     <Content Include="css\custom.css" />
     <Content Include="css\images\animated-overlay.gif" />
@@ -187,6 +194,7 @@
     <Content Include="Master.Master" />
     <Content Include="RegistroFormula.aspx" />
     <Content Include="ReporteCanillas.aspx" />
+    <Content Include="SolicitudPautas.aspx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reportes\rptCanillas.rdlc" />
