@@ -9,6 +9,7 @@
     <script type="text/javascript" src="js/util.js"></script>
     <script type="text/javascript" src="js/moog.custom.alert.js"></script>
     <script type="text/javascript" src="js/sidd.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <link href="css/jquery-ui.css" rel="Stylesheet"/>
     <link href="css/custom.css" rel="Stylesheet"/>
     <link href="css/bootstrap.min.css" rel="Stylesheet"/>
@@ -34,6 +35,8 @@
                                     Value="Fórmula de proyección"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/EjecucionProyeccion.aspx" 
                                     Text="Proyección de Pauta" Value="Proyección de Pauta"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/SolicitudPautas.aspx" 
+                                    Text="Solicitud de Pautas" Value="Solicitud de Pautas"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/ReporteCanillas.aspx" Text="Reporte de canillas" 
                                     Value="Reporte de canillas"></asp:MenuItem>
                             </Items>

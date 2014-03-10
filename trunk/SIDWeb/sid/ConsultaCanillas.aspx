@@ -13,6 +13,12 @@
     <link href="css/custom.css" rel="Stylesheet"/>
     <link href="css/bootstrap.min.css" rel="Stylesheet"/>
     <link href="css/bootstrap-theme.min.css" rel="Stylesheet"/>
+    <script type="text/javascript">
+        function devolver(codigoCanilla, nombreCanilla) {
+            window.opener.devolverCanilla(codigoCanilla, nombreCanilla);
+            window.close();
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server" class="form-horizontal" role="form">
@@ -30,7 +36,7 @@
                         </div>
                         <label for='<%=txtNombreCanilla.ClientID%>' class="col-sm-2 control-label">Nombre del Canilla</label>
                         <div class="col-sm-5">
-                            <asp:TextBox ID="txtNombreCanilla" runat="server" Width="460px" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtNombreCanilla" runat="server" Width="350px" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
@@ -39,36 +45,37 @@
 							<asp:DropDownList ID="ddlTipoDocumento" runat="server" Width="150px" CssClass="form-control"></asp:DropDownList>
                         </div>
                         <label for='<%=txtNumeroDocumento.ClientID%>' class="col-sm-2 control-label">Número de documento</label>
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <asp:TextBox ID="txtNumeroDocumento" runat="server" Width="200px" CssClass="form-control"></asp:TextBox>
                         </div>
-						<div class="col-sm-1">
+						<div class="col-sm-2">
 							<asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-default" 
                                 onclick="btnBuscar_Click"/>
 						</div>
                     </div>
                 </fieldset>
                 <div class="form-group">
-                    <div class="col-sm-12">
+                    <div class="col-lg-9 col-lg-offset-2">
                         <div id="divResultado" runat="server">
-                            <div style="overflow: auto; min-height:185px; max-height: 250px;">
-                                <asp:GridView id="dgvCanillas" runat="server" AutoGenerateColumns="False" Width="670px"
-                                    BorderColor="#ECECEC" BorderStyle="Solid" ShowHeader="true">
+                            <div style="overflow: auto; max-height: 850px;">
+                                <asp:GridView id="dgvCanillas" runat="server" AutoGenerateColumns="False" Width="820px"
+                                    BorderColor="#ECECEC" BorderStyle="Solid" ShowHeader="true" 
+                                    onrowcommand="dgvCanillas_RowCommand" onrowdatabound="dgvCanillas_RowDataBound">
                                     <Columns>
                                         <asp:BoundField DataField="codigoCanilla" HeaderText="Código del canilla">
-                                            <ItemStyle HorizontalAlign="Center" Width="150px"/>
+                                            <ItemStyle HorizontalAlign="Center" Width="130px" Font-Underline="true"/>
                                         </asp:BoundField>
                                         <asp:BoundField DataField="nombreCompletoCanilla" HeaderText="Nombre del canilla">
-                                            <ItemStyle HorizontalAlign="Left" Width="220px"/>
+                                            <ItemStyle HorizontalAlign="Left" Width="250px"/>
                                         </asp:BoundField>
                                         <asp:BoundField DataField="tipoDocumento" HeaderText="Tipo documento">
-                                            <ItemStyle HorizontalAlign="Left" Width="150px"/>
+                                            <ItemStyle HorizontalAlign="Center" Width="120px"/>
                                         </asp:BoundField>
                                         <asp:BoundField DataField="numeroDocumento" HeaderText="Número documento">
                                             <ItemStyle HorizontalAlign="Left" Width="150px"/>
                                         </asp:BoundField>
 									    <asp:BoundField DataField="nombreAgencia" HeaderText="Agencia">
-                                            <ItemStyle HorizontalAlign="Left" Width="150px"/>
+                                            <ItemStyle HorizontalAlign="Left" Width="170px"/>
                                         </asp:BoundField>
                                     </Columns>
                                 </asp:GridView>
@@ -82,7 +89,6 @@
                 <div class="form-group">
                     <div class="col-sm-offset-5 col-sm-7">
                         <asp:Button ID="btnCerrar" runat="server" Text="Cerrar" class="btn btn-default" />
-                        <a id="btnCerrar2" data-role="button">Cerrar</a>
                     </div>
                 </div>
             </div>

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text;
 using BLLayer;
 using BELayer;
 using System.Data;
@@ -14,6 +15,8 @@ namespace sid
     public partial class ConsultaCanillas : System.Web.UI.Page
     {
         BLCanilla oBlCanilla = new BLCanilla();
+        String txtD = String.Empty;
+        String txtC = String.Empty;
 
         #region "EVENTOS-----------------------------------"
         protected void Page_Load(object sender, EventArgs e)
@@ -21,12 +24,44 @@ namespace sid
             if (!Page.IsPostBack)
             {
                 setControles();
+                txtC = Request.QueryString["txtc"];
+                txtD = Request.QueryString["txtd"];
             }
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             buscarCanillas();
+        }
+
+        protected void dgvCanillas_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                //e.Row.Cells[0].Style.Add("cursor","hand");
+                e.Row.Cells[0].Attributes.Add("ondblclick", "devolver('" + ((BECanilla)e.Row.DataItem).codigoCanilla.Trim() + "', '" + ((BECanilla)e.Row.DataItem).nombreCompletoCanilla + "');");
+                //e.Row.Cells[0].Attributes.Add("ondblclick", "devolver2('" + ((BECanilla)e.Row.DataItem).codigoCanilla.Trim() + "', '" + ((BECanilla)e.Row.DataItem).nombreCompletoCanilla + "');");
+                //devolver(codigoCanilla, nombreCanilla)
+                //BoundColumn columnaCodigo = (BoundColumn)e.Row.Cells[0].;
+            }
+        }
+        
+        protected void dgvCanillas_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            switch (e.CommandName.ToString())
+            {
+                case "Seleccionar":
+                    StringBuilder strJScript = new StringBuilder();
+                    string strCodigoCanilla = e.CommandArgument.ToString();
+                    string strNombreCanilla = "lala";// e.Item.Cells[2].Text;
+                    strJScript.Append("<script>");
+                    strJScript.Append("alert('test Js');");
+                    strJScript.AppendFormat("window.opener.devolverCanilla('{0}','{1}');", strCodigoCanilla, strNombreCanilla);
+                    strJScript.Append("window.close();");
+                    strJScript.Append("</script>");
+                    ClientScript.RegisterStartupScript(typeof(Page), "keyClientBlock2", strJScript.ToString());
+                    break;
+            }
         }
         #endregion
         #region "METODOS-----------------------------------"
