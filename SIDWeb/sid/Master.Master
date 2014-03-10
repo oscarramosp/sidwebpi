@@ -6,6 +6,7 @@
 <head id="Head1" runat="server">
     <title>SID</title>
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
     <script type="text/javascript" src="js/util.js"></script>
     <script type="text/javascript" src="js/moog.custom.alert.js"></script>
     <script type="text/javascript" src="js/sidd.js"></script>
