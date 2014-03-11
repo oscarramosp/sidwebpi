@@ -23,6 +23,15 @@ namespace sid {
         protected global::System.Web.UI.ScriptManager smFiltros;
         
         /// <summary>
+        /// upSolicitudPauta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upSolicitudPauta;
+        
+        /// <summary>
         /// txtCodigoCanilla control.
         /// </summary>
         /// <remarks>
@@ -30,6 +39,15 @@ namespace sid {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCodigoCanilla;
+        
+        /// <summary>
+        /// btnGenerarEvento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGenerarEvento;
         
         /// <summary>
         /// txtNombreCanilla control.
@@ -41,12 +59,48 @@ namespace sid {
         protected global::System.Web.UI.WebControls.TextBox txtNombreCanilla;
         
         /// <summary>
-        /// upSolicitudPauta control.
+        /// clnFecha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upSolicitudPauta;
+        protected global::System.Web.UI.WebControls.Calendar clnFecha;
+        
+        /// <summary>
+        /// txtFechaProyeccion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFechaProyeccion;
+        
+        /// <summary>
+        /// divResultado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divResultado;
+        
+        /// <summary>
+        /// spnMensaje control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spnMensaje;
+        
+        /// <summary>
+        /// btnSolicitarPauta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSolicitarPauta;
     }
 }

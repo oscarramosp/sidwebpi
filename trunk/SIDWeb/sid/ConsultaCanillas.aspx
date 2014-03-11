@@ -60,7 +60,7 @@
                             <div style="overflow: auto; max-height: 850px;">
                                 <asp:GridView id="dgvCanillas" runat="server" AutoGenerateColumns="False" Width="820px"
                                     BorderColor="#ECECEC" BorderStyle="Solid" ShowHeader="true" 
-                                    onrowcommand="dgvCanillas_RowCommand" onrowdatabound="dgvCanillas_RowDataBound">
+                                    onrowdatabound="dgvCanillas_RowDataBound">
                                     <Columns>
                                         <asp:BoundField DataField="codigoCanilla" HeaderText="Código del canilla">
                                             <ItemStyle HorizontalAlign="Center" Width="130px" Font-Underline="true"/>

@@ -165,3 +165,8 @@
   background-color: #f7f5fa;
   border-radius: 5px;
 }
+
+.no-display
+{
+display:none;
+}

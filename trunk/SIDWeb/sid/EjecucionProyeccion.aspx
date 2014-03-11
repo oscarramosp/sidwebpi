@@ -14,7 +14,7 @@
                 <div class="col-sm-9">
                     <asp:Calendar ID="clnFecha" runat="server" 
                         onselectionchanged="clnFecha_SelectionChanged"></asp:Calendar>
-                    <asp:TextBox ID="txtFechaProyeccion" runat="server" Width="100" CssClass="classInput" MaxLength="10"></asp:TextBox>
+                    <!-- <asp:TextBox ID="txtFechaProyeccion" runat="server" Width="100" CssClass="classInput" MaxLength="10"></asp:TextBox> -->
                 </div>
             </div>
             <div class="form-group">
