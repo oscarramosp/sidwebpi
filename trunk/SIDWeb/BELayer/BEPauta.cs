@@ -7,6 +7,9 @@ namespace BELayer
 {
     public class BEPauta : BEBase
     {
+        public string codigoDistribuidor { get; set; }
+        public string codigoAgencia { get; set; }
+        public string codigoCanilla { get; set; }
         public string codigoEmpresa { get; set; }
         public string razonSocialEmpresa { get; set; }
         public string codigoCanal { get; set; }
