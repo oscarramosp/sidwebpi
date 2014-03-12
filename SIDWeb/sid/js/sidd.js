@@ -18,3 +18,29 @@ function GetValue(y, z, l, r) {
         textedit.value = textedit.value + x;
     }
 }
+
+function fieldNumber(evt) {
+    var evento_key = evt.keyCode;
+    switch (evento_key) {
+        case 48:
+        case 49:
+        case 50:
+        case 51:
+        case 52:
+        case 53:
+        case 54:
+        case 55:
+        case 56:
+        case 57: break;
+        default: evt.keyCode = 0;
+            return false;
+    }
+}
+
+function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+        return false;
+
+    return true;
+}

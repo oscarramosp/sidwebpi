@@ -23,15 +23,6 @@ namespace sid {
         protected global::System.Web.UI.ScriptManager smFiltros;
         
         /// <summary>
-        /// upSolicitudPauta control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upSolicitudPauta;
-        
-        /// <summary>
         /// txtCodigoCanilla control.
         /// </summary>
         /// <remarks>
@@ -59,6 +50,15 @@ namespace sid {
         protected global::System.Web.UI.WebControls.TextBox txtNombreCanilla;
         
         /// <summary>
+        /// upSolicitudPauta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upSolicitudPauta;
+        
+        /// <summary>
         /// clnFecha control.
         /// </summary>
         /// <remarks>
@@ -84,6 +84,15 @@ namespace sid {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divResultado;
+        
+        /// <summary>
+        /// dgvPautaCanilla control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dgvPautaCanilla;
         
         /// <summary>
         /// spnMensaje control.

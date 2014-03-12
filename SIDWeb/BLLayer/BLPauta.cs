@@ -79,5 +79,22 @@ namespace BLLayer
 
             return oDTOResultado;
         }
+
+        public List<BEPauta> selectPautasCanillas(BEPauta pauta)
+        {
+            List<BEPauta> listaPautas = new List<BEPauta>();
+
+            try
+            {
+                DAPauta oDAPauta = new DAPauta();
+                listaPautas = oDAPauta.selectPautasCanillas(pauta);
+            }
+            catch (Exception ex)
+            {
+                ExceptionPolicy.HandleException(ex, "Policy");
+            }
+
+            return listaPautas;
+        }
     }
 }

@@ -1,14 +1,21 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text;
+using BLLayer;
+using BELayer;
+using System.Data;
 
 namespace sid
 {
     public partial class SolicitudPautas : System.Web.UI.Page
     {
+        BLPauta oBLPauta = new BLPauta();
+
         #region "EVENTOS---------------------"
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -49,7 +56,32 @@ namespace sid
 
             if (validarDatos())
             {
-                
+                BEPauta pauta = new BEPauta();
+                pauta.codigoCanilla = txtCodigoCanilla.Text.Trim();
+                pauta.fechaPauta = clnFecha.SelectedDate;
+                List<BEPauta> listaPautas = oBLPauta.selectPautasCanillas(pauta);
+
+                var strMensaje = string.Empty;
+                var strClass = string.Empty;
+
+                if (listaPautas.Count > 0)
+                {
+                    dgvPautaCanilla.DataSource = listaPautas;
+                    dgvPautaCanilla.DataBind();
+                    divResultado.Visible = true;
+                }
+                else
+                {
+                    dgvPautaCanilla.DataSource = null;
+                    dgvPautaCanilla.DataBind();
+                    divResultado.Visible = false;
+                    strMensaje = "El canilla no tiene productos asignados";
+                    strClass = "alert alert-warning";
+
+                    spnMensaje.Attributes["class"] = strClass;
+                    spnMensaje.InnerText = strMensaje;
+                    spnMensaje.Visible = true;
+                }
             }
         }
 
