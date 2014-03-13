@@ -65,6 +65,41 @@
                                         <asp:Label ID="lblDevuelta" runat="server" Text='<%# Bind("cantidadDevuelta") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Código del Distribuidor" Visible="false">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCodigoDistribuidor" runat="server" Text='<%# Bind("codigoDistribuidor") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Código de la Agencia" Visible="false">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCodigoAgencia" runat="server" Text='<%# Bind("codigoAgencia") %>'></asp:Label>  
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Código del Canilla" Visible="false">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCodigoCanilla" runat="server" Text='<%# Bind("codigoCanilla") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Código de la Empresa" Visible="false">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCodigoEmpresa" runat="server" Text='<%# Bind("codigoEmpresa") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Código del Sector" Visible="false">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCodigoSector" runat="server" Text='<%# Bind("codigoSector") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Código del Canal" Visible="false">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCodigoCanal" runat="server" Text='<%# Bind("codigoCanal") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Código del Motivo de Venta" Visible="false">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblCodigoMotivoVenta" runat="server" Text='<%# Bind("codigoMotivoVenta") %>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
                     </div>
@@ -103,10 +138,8 @@
 
                 var mensaje = '';
 
-                if (nombreCanilla == '' || !evaluarAlfaEspacio(nombreCanilla)) {
+                if (nombreCanilla == '')
                     mensaje += "<li>Ingrese el canilla.</li>";
-                }
-                alert(evaluarAlfaEspacio(nombreCanilla));
 
                 var cantProductos = 0;
                 var errorEnGrilla = false;
@@ -127,8 +160,8 @@
 
                     cantProductos++;
                 });
-                if (cantProductos <= 1)
-                    mensaje += "<li>El canilla no tiene productos asignados. Verifique que se hayan seleccionado un canilla y la fecha de solicitud para realizar la búsqueda.</li>";
+                if (cantProductos == 0)
+                    mensaje += "<li>El canilla no tiene productos asignados.</li> <li>Verifique que se hayan seleccionado un canilla y la fecha de solicitud para realizar la búsqueda.</li>";
 
                 if (mensaje != '') {
                     mensaje = '<ul>' + mensaje + '</ul>';

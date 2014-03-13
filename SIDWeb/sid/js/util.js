@@ -84,7 +84,7 @@ function soloAlfaEspacio(evt) {
 }
 
 function evaluarAlfaEspacio(texto) {
-    var reg = /^(([a-zA-Z]|[ñ]|[Ñ]|[á]|[é]|[í]|[ó]|[ú]|[Á]|[É]|[Í]|[Ó]|[Ú]|[\s])*)$/;
+    var reg = /^(([a-zA-Z]|[ñ]|[Ñ]|[á]|[é]|[í]|[ó]|[ú]|[Á]|[É]|[Í]|[Ó]|[Ú]|[,]|[\s])*)$/;
     return reg.test(texto);
 }
 
