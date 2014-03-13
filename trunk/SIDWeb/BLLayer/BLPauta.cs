@@ -96,5 +96,23 @@ namespace BLLayer
 
             return listaPautas;
         }
+
+        public DTOResultado grabarSolicitudPauta(List<BEPauta> listaPautas)
+        {
+            var oDAPauta = new DAPauta();
+            var oDTOResultado = new DTOResultado();
+
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                ExceptionPolicy.HandleException(ex, "Policy");
+                return null;
+            }
+
+            return oDTOResultado;
+        }
     }
 }

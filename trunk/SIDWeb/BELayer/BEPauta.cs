@@ -11,6 +11,8 @@ namespace BELayer
         public string codigoAgencia { get; set; }
         public string codigoCanilla { get; set; }
         public string codigoEmpresa { get; set; }
+        public string codigoSector { get; set; }
+        public string codigoMotivoVenta { get; set; }
         public string razonSocialEmpresa { get; set; }
         public string codigoCanal { get; set; }
         public string descripcionCanal { get; set; }

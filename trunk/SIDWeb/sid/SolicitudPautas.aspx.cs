@@ -37,7 +37,47 @@ namespace sid
 
         protected void btnSolicitarPauta_Click(object sender, EventArgs e)
         {
+            List<BEPauta> listaPauta = new List<BEPauta>();
+            BEPauta pauta;
+            foreach (GridViewRow row in dgvPautaCanilla.Rows)
+            {
+                pauta = new BEPauta();
+                pauta.codigoDistribuidor = ((Label)row.FindControl("lblCodigoDistribuidor")).Text.Trim();
+                pauta.codigoAgencia = ((Label)row.FindControl("lblCodigoAgencia")).Text.Trim();
+                pauta.codigoCanilla = ((Label)row.FindControl("lblCodigoCanilla")).Text.Trim();
+                pauta.codigoEmpresa = ((Label)row.FindControl("lblCodigoEmpresa")).Text.Trim();
+                pauta.codigoSector = ((Label)row.FindControl("lblCodigoSector")).Text.Trim();
+                pauta.codigoProducto = row.Cells[0].Text.Trim();
+                pauta.codigoCanal = ((Label)row.FindControl("lblCodigoCanal")).Text.Trim();
+                pauta.codigoMotivoVenta = ((Label)row.FindControl("lblCodigoMotivoVenta")).Text.Trim();
+                pauta.fechaPauta = clnFecha.SelectedDate;
+                pauta.cantidadSolicitada = Convert.ToInt32(((TextBox)row.FindControl("txtSolicitada")).Text);
+                listaPauta.Add(pauta);
+            }
 
+            var oDTOResultado = oBLPauta.grabarSolicitudPauta(listaPauta);
+
+            listaPauta = (List<BEPauta>)oDTOResultado.Objeto;
+
+            var strMensaje = string.Empty;
+            var strClass = string.Empty;
+
+            if (oDTOResultado.Codigo != (int)Constantes.CodigoGrabarFormula.Ok)
+            {
+                strClass = "alert alert-warning";
+                if (oDTOResultado.Codigo == (int)Constantes.CodigoSolicitarPauta.ErrorEnviadoASAP)
+                {
+                    strMensaje = "Ya se realizó el envío a SAP de las solicitudes de pauta para el canilla ingresado";
+                }
+            }
+            else
+            {
+                strMensaje = "Registro de solicitudes de pauta exitoso";
+                strClass = "alert alert-success";
+            }
+
+            spnMensaje.Attributes["class"] = strClass;
+            spnMensaje.InnerText = strMensaje;
         }
 
         protected void dgvPautaCanilla_RowDataBound(object sender, GridViewRowEventArgs e)

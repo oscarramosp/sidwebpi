@@ -86,8 +86,14 @@ namespace DALayer
             while (rdr.Read())
             {
                 pauta = new BEPauta();
+                pauta.codigoDistribuidor = rdr.IsDBNull(rdr.GetOrdinal("CH_CODIGO_DISTRIBUIDOR")) ? String.Empty : rdr.GetString(rdr.GetOrdinal("CH_CODIGO_DISTRIBUIDOR"));
+                pauta.codigoAgencia = rdr.IsDBNull(rdr.GetOrdinal("CH_CODIGO_AGENCIA")) ? String.Empty : rdr.GetString(rdr.GetOrdinal("CH_CODIGO_AGENCIA"));
                 pauta.codigoCanilla = rdr.IsDBNull(rdr.GetOrdinal("CH_CODIGO_CANILLA")) ? String.Empty : rdr.GetString(rdr.GetOrdinal("CH_CODIGO_CANILLA"));
+                pauta.codigoEmpresa = rdr.IsDBNull(rdr.GetOrdinal("CH_CODIGO_EMPRESA")) ? String.Empty : rdr.GetString(rdr.GetOrdinal("CH_CODIGO_EMPRESA"));
+                pauta.codigoSector = rdr.IsDBNull(rdr.GetOrdinal("CH_CODIGO_SECTOR")) ? String.Empty : rdr.GetString(rdr.GetOrdinal("CH_CODIGO_SECTOR"));
                 pauta.codigoProducto = rdr.IsDBNull(rdr.GetOrdinal("CH_CODIGO_PRODUCTO")) ? String.Empty : rdr.GetString(rdr.GetOrdinal("CH_CODIGO_PRODUCTO"));
+                pauta.codigoCanal = rdr.IsDBNull(rdr.GetOrdinal("CH_CODIGO_CANAL")) ? String.Empty : rdr.GetString(rdr.GetOrdinal("CH_CODIGO_CANAL"));
+                pauta.codigoMotivoVenta = rdr.IsDBNull(rdr.GetOrdinal("CH_CODIGO_MOTIVO_VENTA")) ? String.Empty : rdr.GetString(rdr.GetOrdinal("CH_CODIGO_MOTIVO_VENTA"));
                 pauta.descripcionProducto = rdr.IsDBNull(rdr.GetOrdinal("VC_DESCRIPCION_PRODUCTO")) ? String.Empty : rdr.GetString(rdr.GetOrdinal("VC_DESCRIPCION_PRODUCTO"));
                 pauta.fechaPauta = rdr.IsDBNull(rdr.GetOrdinal("DT_FECHA_PAUTA")) ? new DateTime() : rdr.GetDateTime(rdr.GetOrdinal("DT_FECHA_PAUTA"));
                 pauta.cantidadSolicitada = rdr.IsDBNull(rdr.GetOrdinal("IN_CANTIDAD_SOLICITADA")) ? 0 : rdr.GetInt32(rdr.GetOrdinal("IN_CANTIDAD_SOLICITADA"));

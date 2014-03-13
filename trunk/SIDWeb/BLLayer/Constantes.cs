@@ -24,5 +24,11 @@ namespace BLLayer
             FueraDeHorario = -3,
             FormulaNoDefinida = -4
         }
+
+        public enum CodigoSolicitarPauta
+        {
+            Ok = 0,
+            ErrorEnviadoASAP = -1
+        }
     }
 }
