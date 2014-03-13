@@ -44,7 +44,8 @@
                 <div class=" col-sm-offset-1 col-sm-11">
                     <div id="divResultado" runat="server">
                         <asp:GridView id="dgvPautaCanilla" runat="server" AutoGenerateColumns="False" Width="670px"
-                            BorderColor="#ECECEC" BorderStyle="Solid" ShowHeader="true">
+                            BorderColor="#ECECEC" BorderStyle="Solid" ShowHeader="true" 
+                            onrowdatabound="dgvPautaCanilla_RowDataBound">
                             <Columns>
                                 <asp:BoundField DataField="codigoProducto" HeaderText="Código del producto">
                                     <ItemStyle HorizontalAlign="Center" Width="150px"/>
@@ -92,6 +93,59 @@
             });
             function abrirBusqueda() {
                 window.open("../ConsultaCanillas.aspx", "_blank", "toolbar=no, scrollbars=yes, resizable=0, top=500, left=500, width=870, height=400");
+            }
+            $("#<%= btnSolicitarPauta.ClientID %>").click(function() {
+                return validar();
+            });
+            function validar() {
+                var codigoCanilla = $.trim($("#<%= txtCodigoCanilla.ClientID %>").val());
+                var nombreCanilla = $.trim($("#<%= txtNombreCanilla.ClientID %>").val());
+
+                var mensaje = '';
+
+                if (nombreCanilla == '' || !evaluarAlfaEspacio(nombreCanilla)) {
+                    mensaje += "<li>Ingrese el canilla.</li>";
+                }
+                alert(evaluarAlfaEspacio(nombreCanilla));
+
+                var cantProductos = 0;
+                var errorEnGrilla = false;
+
+                $("#<%= dgvPautaCanilla.ClientID %> tr").each(function() {
+
+                    if (cantProductos >= 1) {
+
+                        var cantidadSolicitada = $(this).children("td").eq(2).find('input').eq(0).val();
+
+                        if (cantidadSolicitada == '' || !esEnteroValido(cantidadSolicitada)) {
+                            errorEnGrilla = true;
+                            mensaje += "<li>Las cantidades solicitadas deben tener un valor mayor o igual a cero (0).</li>";
+                        }
+                        if (errorEnGrilla)
+                            return;
+                    }
+
+                    cantProductos++;
+                });
+                if (cantProductos <= 1)
+                    mensaje += "<li>El canilla no tiene productos asignados. Verifique que se hayan seleccionado un canilla y la fecha de solicitud para realizar la búsqueda.</li>";
+
+                if (mensaje != '') {
+                    mensaje = '<ul>' + mensaje + '</ul>';
+                    jcAlert('Datos Incompletos', mensaje, function(choice) { return choice });
+                    return false;
+                }
+
+                jcConfirm('Solicitar pauta', '¿Desea registrar la solicitudd de pauta?', function(choice) {
+
+                    if (choice) {
+                        var event = "<%= btnSolicitarPauta.ClientID %>";
+                        event = event.replace(/_/g, "$");
+                        __doPostBack(event, '');
+                    }
+                });
+
+                return false;
             }
         });
     </script>

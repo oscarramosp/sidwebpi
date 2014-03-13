@@ -39,6 +39,16 @@ namespace sid
         {
 
         }
+
+        protected void dgvPautaCanilla_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                TextBox txtSolicitada = (TextBox)e.Row.FindControl("txtSolicitada");
+                Label lblSolicitada = (Label)e.Row.FindControl("lblSolicitada");
+                lblSolicitada.Visible = false;
+            }
+        }
         #endregion
 
         #region "METODOS---------------------"
