@@ -67,7 +67,7 @@ namespace sid
                 strClass = "alert alert-warning";
                 if (oDTOResultado.Codigo == (int)Constantes.CodigoSolicitarPauta.ErrorEnviadoASAP)
                 {
-                    strMensaje = "Ya se realizó el envío a SAP de las solicitudes de pauta para el canilla ingresado";
+                    strMensaje = "Ya se realizó la proyección de pautas para la fecha ingresados, no se puede actualizar la solicitud";
                 }
             }
             else
@@ -78,6 +78,7 @@ namespace sid
 
             spnMensaje.Attributes["class"] = strClass;
             spnMensaje.InnerText = strMensaje;
+            spnMensaje.Visible = true;
         }
 
         protected void dgvPautaCanilla_RowDataBound(object sender, GridViewRowEventArgs e)

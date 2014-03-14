@@ -104,10 +104,39 @@ namespace BLLayer
 
             try
             {
-
+                Int32 intValidacion = oDAPauta.validarSolicitarPauta(listaPautas[0]);
+                if (intValidacion != (int)Constantes.CodigoGrabarFormula.Ok)
+                {
+                    if (intValidacion == (int)Constantes.CodigoSolicitarPauta.ErrorEnviadoASAP)
+                    {
+                        oDTOResultado.Codigo = (int)Constantes.CodigoSolicitarPauta.ErrorEnviadoASAP;
+                    }
+                    oDTOResultado.Objeto = listaPautas;
+                    return oDTOResultado;
+                }
             }
             catch (Exception ex)
             {
+                ExceptionPolicy.HandleException(ex, "Policy");
+                return null;
+            }
+
+            oDAPauta.mIniciarTransaccion();
+
+            try
+            {
+                foreach (BEPauta pauta in listaPautas)
+                {
+                    oDAPauta.grabarSolicitudPauta(pauta, oDAPauta.mtransaction);
+                }
+                oDAPauta.mCommitTransaccion();
+                oDTOResultado.Codigo = (int)Constantes.CodigoSolicitarPauta.Ok;
+                oDTOResultado.Objeto = listaPautas;
+                return oDTOResultado;
+            }
+            catch (Exception ex)
+            {
+                oDAPauta.mRollbackTransaccion();
                 ExceptionPolicy.HandleException(ex, "Policy");
                 return null;
             }

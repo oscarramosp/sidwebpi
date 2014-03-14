@@ -104,5 +104,56 @@ namespace DALayer
             }
             return listaPautas;
         }
+
+        public Int32 validarSolicitarPauta(BEPauta pauta)
+        {
+            Database db = DatabaseFactory.CreateDatabase();
+            System.Data.Common.DbCommand dbCommand = db.GetStoredProcCommand("SP_VALIDAR_SOLICITAR_PAUTA");
+
+            Int32 intCodigoError = 0;
+
+            IDbDataParameter myParam = dbCommand.CreateParameter();
+            myParam.DbType = DbType.Int32;
+            myParam.ParameterName = "@IN_CODIGO_ERROR";
+            myParam.Direction = ParameterDirection.InputOutput;
+            myParam.Value = intCodigoError;
+            dbCommand.Parameters.Add(myParam);
+
+            db.AddInParameter(dbCommand, "@CH_CODIGO_DISTRIBUIDOR", DbType.String, pauta.codigoDistribuidor);
+            db.AddInParameter(dbCommand, "@CH_CODIGO_AGENCIA", DbType.String, pauta.codigoAgencia);
+            db.AddInParameter(dbCommand, "@CH_CODIGO_CANILLA", DbType.String, pauta.codigoCanilla);
+            db.AddInParameter(dbCommand, "@CH_CODIGO_EMPRESA", DbType.String, pauta.codigoEmpresa);
+            db.AddInParameter(dbCommand, "@CH_CODIGO_SECTOR", DbType.String, pauta.codigoSector);
+            db.AddInParameter(dbCommand, "@CH_CODIGO_PRODUCTO", DbType.String, pauta.codigoProducto);
+            db.AddInParameter(dbCommand, "@CH_CODIGO_CANAL", DbType.String, pauta.codigoCanal);
+            db.AddInParameter(dbCommand, "@CH_CODIGO_MOTIVO_VENTA", DbType.String, pauta.codigoMotivoVenta);
+            db.AddInParameter(dbCommand, "@DT_FECHA_PAUTA", DbType.DateTime, pauta.fechaPauta);
+            
+
+            db.ExecuteNonQuery(dbCommand);
+
+            intCodigoError = Convert.ToInt32(myParam.Value);
+
+            return intCodigoError;
+        }
+
+        public void grabarSolicitudPauta(BEPauta pauta, System.Data.Common.DbTransaction mTransaction)
+        {
+            Database db = DatabaseFactory.CreateDatabase();
+            System.Data.Common.DbCommand dbCommandWrapper = db.GetStoredProcCommand("SP_GRABAR_SOLICITUD_PAUTA");
+
+            db.AddInParameter(dbCommandWrapper, "@CH_CODIGO_DISTRIBUIDOR", DbType.String, pauta.codigoDistribuidor.Trim());
+            db.AddInParameter(dbCommandWrapper, "@CH_CODIGO_AGENCIA", DbType.String, pauta.codigoAgencia.Trim());
+            db.AddInParameter(dbCommandWrapper, "@CH_CODIGO_CANILLA", DbType.String, pauta.codigoCanilla.Trim());
+            db.AddInParameter(dbCommandWrapper, "@CH_CODIGO_EMPRESA", DbType.String, pauta.codigoEmpresa.Trim());
+            db.AddInParameter(dbCommandWrapper, "@CH_CODIGO_SECTOR", DbType.String, pauta.codigoSector.Trim());
+            db.AddInParameter(dbCommandWrapper, "@CH_CODIGO_PRODUCTO", DbType.String, pauta.codigoProducto.Trim());
+            db.AddInParameter(dbCommandWrapper, "@CH_CODIGO_CANAL", DbType.String, pauta.codigoCanal.Trim());
+            db.AddInParameter(dbCommandWrapper, "@CH_CODIGO_MOTIVO_VENTA", DbType.String, pauta.codigoMotivoVenta.Trim());
+            db.AddInParameter(dbCommandWrapper, "@DT_FECHA_PAUTA", DbType.DateTime, pauta.fechaPauta);
+            db.AddInParameter(dbCommandWrapper, "@IN_CANTIDAD_SOLICITADA", DbType.Int32, pauta.cantidadSolicitada);
+
+            db.ExecuteNonQuery(dbCommandWrapper, mTransaction);
+        }
     }
 }
