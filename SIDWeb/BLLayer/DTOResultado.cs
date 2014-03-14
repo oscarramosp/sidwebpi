@@ -4,6 +4,7 @@ using System.Text;
 
 namespace BLLayer
 {
+    [Serializable]
     public class DTOResultado
     {
         public int Codigo { get; set; }
