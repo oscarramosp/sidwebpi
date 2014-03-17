@@ -59,6 +59,9 @@
                                         <asp:Label ID="lblSolicitada" runat="server" Text='<%# Bind("cantidadSolicitada") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
+                                <asp:BoundField DataField="cantidadEntregada" HeaderText="Cantidad aprobada">
+                                    <ItemStyle HorizontalAlign="Center" Width="150px"/>
+                                </asp:BoundField>
                                 <asp:TemplateField HeaderText="Cantidad a devolver" Visible="false">
                                     <ItemTemplate>
                                         <asp:TextBox ID="txtDevuelta" runat="server" CssClass="form-control" Text='<%# Bind("cantidadDevuelta") %>' onkeypress="return isNumberKey(event)"></asp:TextBox>
@@ -148,11 +151,21 @@
 
                     if (cantProductos >= 1) {
 
-                        var cantidadSolicitada = $(this).children("td").eq(2).find('input').eq(0).val();
+                        if (window.location.href.substring(window.location.href.length - 1) == 'd') {
+                            var cantidadDevuelta = $(this).children("td").eq(3).find('input').eq(0).val();
 
-                        if (cantidadSolicitada == '' || !esEnteroValido(cantidadSolicitada)) {
-                            errorEnGrilla = true;
-                            mensaje += "<li>Las cantidades solicitadas deben tener un valor mayor o igual a cero (0).</li>";
+                            if (cantidadDevuelta == '' || !esEnteroValido(cantidadDevuelta)) {
+                                errorEnGrilla = true;
+                                mensaje += "<li>Las cantidades a devolver deben tener un valor mayor o igual a cero (0).</li>";
+                            }
+                        }
+                        else {
+                            var cantidadSolicitada = $(this).children("td").eq(2).find('input').eq(0).val();
+
+                            if (cantidadSolicitada == '' || !esEnteroValido(cantidadSolicitada)) {
+                                errorEnGrilla = true;
+                                mensaje += "<li>Las cantidades solicitadas deben tener un valor mayor o igual a cero (0).</li>";
+                            }
                         }
                         if (errorEnGrilla)
                             return;
@@ -161,7 +174,7 @@
                     cantProductos++;
                 });
                 if (cantProductos == 0)
-                    mensaje += "<li>El canilla no tiene productos asignados.</li> <li>Verifique que se hayan seleccionado un canilla y la fecha de solicitud para realizar la búsqueda.</li>";
+                    mensaje += "<li>No hay pautas a procesar.</li> <li>Verifique que se hayan seleccionado un canilla y la fecha de la pauta para realizar la búsqueda.</li>";
 
                 if (mensaje != '') {
                     mensaje = '<ul>' + mensaje + '</ul>';
@@ -169,7 +182,18 @@
                     return false;
                 }
 
-                jcConfirm('Solicitar pauta', '¿Desea registrar la solicitudd de pauta?', function(choice) {
+                var titulo = '';
+                var pregunta = '';
+
+                if (window.location.href.substring(window.location.href.length - 1) == 'd') {
+                    titulo = 'Devolver pauta';
+                    pregunta = '¿Desea registrar las devoluciones de pautas?';
+                } else {
+                    titulo = 'Solicitar pauta';
+                    pregunta = '¿Desea registrar la solicitudd de pauta?';
+                }
+
+                jcConfirm(titulo, pregunta, function(choice) {
 
                     if (choice) {
                         var event = "<%= btnSolicitarPauta.ClientID %>";
