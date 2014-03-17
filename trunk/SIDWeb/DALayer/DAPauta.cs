@@ -80,6 +80,7 @@ namespace DALayer
             Database db = DatabaseFactory.CreateDatabase();
             System.Data.Common.DbCommand dbCommand = db.GetStoredProcCommand("SP_LISTAR_PAUTAS_CANILLAS");
             db.AddInParameter(dbCommand, "@CH_CODIGO_CANILLA", DbType.String, pauta.codigoCanilla.Trim());
+            db.AddInParameter(dbCommand, "@CH_ESTADO_PAUTA", DbType.String, pauta.estadoPauta);
             db.AddInParameter(dbCommand, "@DT_FECHA_PAUTA", DbType.Date, pauta.fechaPauta);
             IDataReader rdr = null;
             rdr = db.ExecuteReader(dbCommand);
@@ -99,7 +100,8 @@ namespace DALayer
                 pauta.cantidadSolicitada = rdr.IsDBNull(rdr.GetOrdinal("IN_CANTIDAD_SOLICITADA")) ? 0 : rdr.GetInt32(rdr.GetOrdinal("IN_CANTIDAD_SOLICITADA"));
                 pauta.cantidadProyectada = rdr.IsDBNull(rdr.GetOrdinal("IN_CANTIDAD_PROYECTADA")) ? 0 : rdr.GetInt32(rdr.GetOrdinal("IN_CANTIDAD_PROYECTADA"));
                 pauta.cantidadAprobada = rdr.IsDBNull(rdr.GetOrdinal("IN_CANTIDAD_APROBADA")) ? 0 : rdr.GetInt32(rdr.GetOrdinal("IN_CANTIDAD_APROBADA"));
-                pauta.cantidadDevuelta = rdr.IsDBNull(rdr.GetOrdinal("IN_CANTIDAD_DEVUELTA")) ? 0 : rdr.GetInt32(rdr.GetOrdinal("IN_CANTIDAD_DEVUELTA"));                
+                pauta.cantidadDevuelta = rdr.IsDBNull(rdr.GetOrdinal("IN_CANTIDAD_DEVUELTA")) ? 0 : rdr.GetInt32(rdr.GetOrdinal("IN_CANTIDAD_DEVUELTA"));
+                pauta.cantidadEntregada = rdr.IsDBNull(rdr.GetOrdinal("IN_CANTIDAD_ENTREGADA")) ? 0 : rdr.GetInt32(rdr.GetOrdinal("IN_CANTIDAD_ENTREGADA"));
                 listaPautas.Add(pauta);
             }
             return listaPautas;

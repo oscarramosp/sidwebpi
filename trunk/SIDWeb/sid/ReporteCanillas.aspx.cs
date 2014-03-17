@@ -9,7 +9,6 @@ using BLLayer;
 using BELayer;
 using System.Data;
 using Microsoft.Reporting.WebForms;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace sid

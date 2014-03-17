@@ -166,7 +166,7 @@ namespace BLLayer
                             strTextoAux = strTextoCompleto.Substring(inContadorAux, inContador - inContadorAux + 1);
                             if (strTextoAux.IndexOf("{") > 0 && strTextoAux.IndexOf("}") > 0)
                             {
-                                strTexto = ",[IN_SECUENCIAL_PERIODO],[CH_CODIGO_COMPANIA],[IN_SECUENCIAL_ESCENARIO],[CH_ANO],[CH_MES],[IN_CODIGO_EMPLEADO]) ";
+                                strTexto = ",[CH_CODIGO_DISTRIBUIDOR],[CH_CODIGO_AGENCIA],[CH_CODIGO_CANILLA],[CH_CODIGO_EMPRESA],[CH_CODIGO_SECTOR],[CH_CODIGO_PRODUCTO],[CH_CODIGO_CANAL],[CH_CODIGO_MOTIVO_VENTA],[DT_FECHA_PAUTA]) ";
                                 strTexto = strTextoAux.Replace("}", strTexto);
                                 strTexto = strTexto.Replace("{", "(");
                                 strTexto = "dbo." + strTexto;

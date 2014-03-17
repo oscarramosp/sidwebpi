@@ -18,6 +18,7 @@ namespace BELayer
         public string descripcionCanal { get; set; }
         public string codigoProducto { get; set; }
         public string descripcionProducto { get; set; }
+        public string estadoPauta { get; set; }
         public DateTime? fechaPauta { get; set; }
         public DateTime? horaInicioMin { get; set; }
         public DateTime? horaInicioMax { get; set; }

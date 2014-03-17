@@ -28,7 +28,8 @@ namespace BLLayer
         public enum CodigoSolicitarPauta
         {
             Ok = 0,
-            ErrorEnviadoASAP = -1
+            ErrorEnviadoASAP = -1,
+            ErrorFechaSolicitud = -2
         }
     }
 }

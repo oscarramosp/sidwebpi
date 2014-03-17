@@ -111,6 +111,10 @@ namespace BLLayer
                     {
                         oDTOResultado.Codigo = (int)Constantes.CodigoSolicitarPauta.ErrorEnviadoASAP;
                     }
+                    if (intValidacion == (int)Constantes.CodigoSolicitarPauta.ErrorFechaSolicitud)
+                    {
+                        oDTOResultado.Codigo = (int)Constantes.CodigoSolicitarPauta.ErrorFechaSolicitud;    
+                    }
                     oDTOResultado.Objeto = listaPautas;
                     return oDTOResultado;
                 }

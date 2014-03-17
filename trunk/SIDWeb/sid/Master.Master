@@ -38,8 +38,8 @@
                                     Text="Solicitud de Pautas" Value="Solicitud de Pautas"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/EjecucionProyeccion.aspx" 
                                     Text="Proyección de Pauta" Value="Proyección de Pauta"></asp:MenuItem>
-                                <asp:MenuItem NavigateUrl="~/ReporteCanillas.aspx" Text="Reporte de canillas" 
-                                    Value="Reporte de canillas"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/SolicitudPautas.aspx?op=d" 
+                                    Text="Devolución de Pautas" Value="Devolución de Pautas"></asp:MenuItem>
                             </Items>
                         </asp:Menu>
                     </ul>

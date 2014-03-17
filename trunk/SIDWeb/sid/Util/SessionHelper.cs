@@ -18,5 +18,16 @@ namespace sid.Util
             return HttpContext.Current.Session["formulaEditarObjeto"] != null ?
                 (BEFormula)HttpContext.Current.Session["formulaEditarObjeto"] : null;
         }
+
+        public static void setOperacionPauta(string operacion)
+        {
+            HttpContext.Current.Session["operacionPauta"] = operacion;
+        }
+
+        public static string getOperacionPauta()
+        {
+            return HttpContext.Current.Session["operacionPauta"] != null ?
+                (string)HttpContext.Current.Session["operacionPauta"] : string.Empty;
+        }
     }
 }
