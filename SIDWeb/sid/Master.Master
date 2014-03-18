@@ -39,7 +39,7 @@
                                 <asp:MenuItem NavigateUrl="~/EjecucionProyeccion.aspx" 
                                     Text="Proyección de Pauta" Value="Proyección de Pauta"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/SolicitudPautas.aspx?op=d" 
-                                    Text="Devolución de Pautas" Value="Devolución de Pautas"></asp:MenuItem>
+                                    Text="Devolución de Productos" Value="Devolución de Productos"></asp:MenuItem>
                             </Items>
                         </asp:Menu>
                     </ul>

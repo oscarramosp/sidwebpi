@@ -22,8 +22,8 @@ namespace sid
         {
             if (!Page.IsPostBack)
             {
-                setControles();
                 Util.SessionHelper.setOperacionPauta(Request.QueryString["op"]);
+                setControles();
             }
         }
 
@@ -75,6 +75,17 @@ namespace sid
         {
             clnFecha.SelectionMode = CalendarSelectionMode.Day;
             clnFecha.SelectedDate = DateTime.Today.AddDays(1);
+
+            if (!String.IsNullOrEmpty(Util.SessionHelper.getOperacionPauta()) && Util.SessionHelper.getOperacionPauta().Equals("d"))
+            {
+                btnSolicitarPauta.Text = "Registrar devolución";
+                lblTxtCln.InnerText = "Fecha de devolución";
+            }
+            else
+            {
+                btnSolicitarPauta.Text = "Solicitar pauta";
+                lblTxtCln.InnerText = "Fecha de solicitud";
+            }
         }
 
         protected void buscarSolicitudes()
