@@ -33,7 +33,7 @@
     <asp:UpdatePanel ID="upSolicitudPauta" runat="server" UpdateMode="Conditional">
         <ContentTemplate>
             <div class="form-group">
-                <label for='<%=clnFecha.ClientID%>' class="col-sm-3 control-label">Fecha a de solicitud</label>
+                <label id="lblTxtCln" runat="server" for='<%=clnFecha.ClientID%>' class="col-sm-3 control-label">Fecha de solicitud</label>
                 <div class="col-sm-9">
                     <asp:Calendar ID="clnFecha" runat="server" 
                         onselectionchanged="clnFecha_SelectionChanged" ></asp:Calendar>
@@ -186,8 +186,8 @@
                 var pregunta = '';
 
                 if (window.location.href.substring(window.location.href.length - 1) == 'd') {
-                    titulo = 'Devolver pauta';
-                    pregunta = '¿Desea registrar las devoluciones de pautas?';
+                    titulo = 'Devolver productos';
+                    pregunta = '¿Desea registrar las devoluciones de los productos?';
                 } else {
                     titulo = 'Solicitar pauta';
                     pregunta = '¿Desea registrar la solicitudd de pauta?';
