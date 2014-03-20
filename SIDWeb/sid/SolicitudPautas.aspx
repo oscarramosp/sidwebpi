@@ -59,7 +59,7 @@
                                         <asp:Label ID="lblSolicitada" runat="server" Text='<%# Bind("cantidadSolicitada") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:BoundField DataField="cantidadEntregada" HeaderText="Cantidad aprobada">
+                                <asp:BoundField DataField="cantidadEntregada" HeaderText="Cantidad entregada">
                                     <ItemStyle HorizontalAlign="Center" Width="150px"/>
                                 </asp:BoundField>
                                 <asp:TemplateField HeaderText="Cantidad a devolver" Visible="false">
@@ -153,10 +153,16 @@
 
                         if (window.location.href.substring(window.location.href.length - 1) == 'd') {
                             var cantidadDevuelta = $(this).children("td").eq(3).find('input').eq(0).val();
+                            var cantidadEntregada = $(this).children("td").eq(2).html();
 
                             if (cantidadDevuelta == '' || !esEnteroValido(cantidadDevuelta)) {
                                 errorEnGrilla = true;
                                 mensaje += "<li>Las cantidades a devolver deben tener un valor mayor o igual a cero (0).</li>";
+                            }
+
+                            if (!errorEnGrilla && parseInt(cantidadEntregada) < parseInt(cantidadDevuelta)) {
+                                errorEnGrilla = true;
+                                mensaje += "<li>Las cantidades a devolver no pueden ser superiores a las cantidades etregadas (" + cantidadDevuelta + ">" + cantidadEntregada + ").</li>";
                             }
                         }
                         else {

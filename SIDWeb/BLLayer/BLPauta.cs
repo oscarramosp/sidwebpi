@@ -147,5 +147,52 @@ namespace BLLayer
 
             return oDTOResultado;
         }
+
+        public DTOResultado grabarDevolverProductos(List<BEPauta> listaPautas)
+        {
+            var oDAPauta = new DAPauta();
+            var oDTOResultado = new DTOResultado();
+
+            try
+            {
+                Int32 intValidacion = oDAPauta.validarDevolverProductos(listaPautas[0]);
+                if (intValidacion != (int)Constantes.CodigoDevolverProductos.Ok)
+                {
+                    if (intValidacion == (int)Constantes.CodigoDevolverProductos.Error)
+                    {
+                        oDTOResultado.Codigo = (int)Constantes.CodigoDevolverProductos.Error;
+                    }
+                    oDTOResultado.Objeto = listaPautas;
+                    return oDTOResultado;
+                }
+            }
+            catch (Exception ex)
+            {
+                ExceptionPolicy.HandleException(ex, "Policy");
+                return null;
+            }
+
+            oDAPauta.mIniciarTransaccion();
+
+            try
+            {
+                foreach (BEPauta pauta in listaPautas)
+                {
+                    oDAPauta.grabarDevolverProducto(pauta, oDAPauta.mtransaction);
+                }
+                oDAPauta.mCommitTransaccion();
+                oDTOResultado.Codigo = (int)Constantes.CodigoDevolverProductos.Ok;
+                oDTOResultado.Objeto = listaPautas;
+                return oDTOResultado;
+            }
+            catch (Exception ex)
+            {
+                oDAPauta.mRollbackTransaccion();
+                ExceptionPolicy.HandleException(ex, "Policy");
+                return null;
+            }
+
+            return oDTOResultado;
+        }
     }
 }
