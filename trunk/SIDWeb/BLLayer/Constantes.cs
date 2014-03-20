@@ -31,5 +31,11 @@ namespace BLLayer
             ErrorEnviadoASAP = -1,
             ErrorFechaSolicitud = -2
         }
+
+        public enum CodigoDevolverProductos
+        {
+            Ok = 0,
+            Error = -1
+        }
     }
 }

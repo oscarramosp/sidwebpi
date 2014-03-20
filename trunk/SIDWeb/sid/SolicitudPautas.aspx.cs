@@ -131,7 +131,7 @@ namespace sid
                     divResultado.Visible = false;
                     if (!String.IsNullOrEmpty(Util.SessionHelper.getOperacionPauta()) && Util.SessionHelper.getOperacionPauta().Equals("d"))
                     {
-                        strMensaje = "No hay pautas aprobadas para el canilla y/o fecha seleccionados";
+                        strMensaje = "No hay pautas entregadas para el canilla y/o fecha seleccionados";
                     }
                     else
                     {
@@ -199,7 +199,7 @@ namespace sid
             var strMensaje = string.Empty;
             var strClass = string.Empty;
 
-            if (oDTOResultado.Codigo != (int)Constantes.CodigoGrabarFormula.Ok)
+            if (oDTOResultado.Codigo != (int)Constantes.CodigoSolicitarPauta.Ok)
             {
                 strClass = "alert alert-warning";
                 if (oDTOResultado.Codigo == (int)Constantes.CodigoSolicitarPauta.ErrorEnviadoASAP)
@@ -238,9 +238,34 @@ namespace sid
                 pauta.codigoCanal = ((Label)row.FindControl("lblCodigoCanal")).Text.Trim();
                 pauta.codigoMotivoVenta = ((Label)row.FindControl("lblCodigoMotivoVenta")).Text.Trim();
                 pauta.fechaPauta = clnFecha.SelectedDate;
-                pauta.cantidadSolicitada = Convert.ToInt32(((TextBox)row.FindControl("txtDevuelta")).Text);
+                pauta.cantidadDevuelta = Convert.ToInt32(((TextBox)row.FindControl("txtDevuelta")).Text);
                 listaPauta.Add(pauta);
             }
+
+            var oDTOResultado = oBLPauta.grabarDevolverProductos(listaPauta);
+
+            listaPauta = (List<BEPauta>)oDTOResultado.Objeto;
+
+            var strMensaje = string.Empty;
+            var strClass = string.Empty;
+
+            if (oDTOResultado.Codigo != (int)Constantes.CodigoDevolverProductos.Ok)
+            {
+                strClass = "alert alert-warning";
+                if (oDTOResultado.Codigo == (int)Constantes.CodigoDevolverProductos.Error)
+                {
+                    strMensaje = "Ya se registró la devolución para el canilla y la fecha seleccionados";
+                }
+            }
+            else
+            {
+                strMensaje = "Registro de devolución de productos exitoso";
+                strClass = "alert alert-success";
+            }
+
+            spnMensaje.Attributes["class"] = strClass;
+            spnMensaje.InnerText = strMensaje;
+            spnMensaje.Visible = true;
         }
         #endregion
     }
