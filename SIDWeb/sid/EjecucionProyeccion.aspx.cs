@@ -58,6 +58,10 @@ namespace sid
 	            {
                     strMensaje = "No se ha definido la fórmula de proyección";
 	            }
+                else if (oDTOResultado.Codigo == (int)Constantes.CodigoProyectarPauta.EstadoFueraFlujo)
+                {
+                    strMensaje = "Las pautas para la fecha ingresada ya fueron procesadas, no se puede ejecutar la proyección";
+                }
                 else
 	            {
                     strMensaje = "Ocurrió un error al proyectar las pautas";

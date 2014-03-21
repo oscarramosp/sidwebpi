@@ -22,7 +22,8 @@ namespace BLLayer
             Error = -1,
             FechaProyeccionIncorrecta = -2,
             FueraDeHorario = -3,
-            FormulaNoDefinida = -4
+            FormulaNoDefinida = -4,
+            EstadoFueraFlujo = -5
         }
 
         public enum CodigoSolicitarPauta

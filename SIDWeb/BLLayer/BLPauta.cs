@@ -45,11 +45,14 @@ namespace BLLayer
                     {
                         oDTOResultado.Codigo = (int)Constantes.CodigoProyectarPauta.FueraDeHorario;
                     }
-                    else
+                    else if (intValidacion == (int)Constantes.CodigoProyectarPauta.FormulaNoDefinida)
                     {
                         oDTOResultado.Codigo = (int)Constantes.CodigoProyectarPauta.FormulaNoDefinida;
                     }
-                    
+                    else
+                    {
+                        oDTOResultado.Codigo = (int)Constantes.CodigoProyectarPauta.EstadoFueraFlujo;
+                    }
                     oDTOResultado.Objeto = pauta;
                     return oDTOResultado;
                 }
