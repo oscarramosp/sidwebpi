@@ -51,7 +51,7 @@ namespace DALayer
             myParam.Value = intCodigoError;
             dbCommand.Parameters.Add(myParam);
 
-            db.AddInParameter(dbCommand, "@DT_FECHA_PAUTA", DbType.DateTime, pauta.fechaPauta);
+            db.AddInParameter(dbCommand, "@DT_FECHA_PAUTA", DbType.Date, pauta.fechaPauta);
             db.AddOutParameter(dbCommand, "@DT_MIN_INICIO_R", DbType.DateTime, 8);
             db.AddOutParameter(dbCommand, "@DT_MAX_INICIO_R", DbType.DateTime, 8);
 
