@@ -9,7 +9,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>Solicitud de pautas</h2>
+    <h2 runat="server" id="tituloPagina" >Solicitud de pautas</h2>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <asp:ScriptManager ID="smFiltros" runat="server">
@@ -130,7 +130,7 @@
                 return abrirBusqueda();
             });
             function abrirBusqueda() {
-                window.open("../ConsultaCanillas.aspx", "_blank", "toolbar=no, scrollbars=yes, resizable=0, top=500, left=500, width=870, height=400");
+                window.open("../ConsultaCanillas.aspx", "_blank", "toolbar=no, scrollbars=yes, resizable=0, top=225, left=300, width=870, height=400");
             }
             $("#<%= btnSolicitarPauta.ClientID %>").click(function() {
                 return validar();
