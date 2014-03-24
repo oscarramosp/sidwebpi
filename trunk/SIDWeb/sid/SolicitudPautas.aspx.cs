@@ -78,11 +78,13 @@ namespace sid
 
             if (!String.IsNullOrEmpty(Util.SessionHelper.getOperacionPauta()) && Util.SessionHelper.getOperacionPauta().Equals("d"))
             {
+                tituloPagina.InnerHtml = "Devolución de productos";
                 btnSolicitarPauta.Text = "Registrar devolución";
                 lblTxtCln.InnerText = "Fecha de devolución";
             }
             else
             {
+                tituloPagina.InnerHtml = "Solicitud de pautas";
                 btnSolicitarPauta.Text = "Solicitar pauta";
                 lblTxtCln.InnerText = "Fecha de solicitud";
             }
