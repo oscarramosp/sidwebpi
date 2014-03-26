@@ -811,3 +811,228 @@ Thread Name:
 Win32 ThreadId:11404
 
 ----------------------------------------
+----------------------------------------
+Timestamp: 26/03/2014 07:10:34 p.m.
+
+Message: HandlingInstanceID: 150003bf-8043-4326-b718-9f55a98f537b
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+03/26/2014 14:10:34
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_TB_PAUTA_TB_FORMULA_PAUTA". The conflict occurred in database "SIDD", table "dbo.TB_FORMULA_PAUTA", column 'DT_FECHA_PAUTA'.
+The statement has been terminated.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 25
+Number : 547
+Procedure : SP_LISTAR_PAUTAS_CANILLAS
+Server : .
+State : 0
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.SetMetaData(_SqlMetaDataSet metaData, Boolean moreInfo)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 460
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 846
+   en DALayer.DAPauta.selectPautasCanillas(BEPauta pauta) en D:\Oscar\FuentesPIv2\SIDWeb\DALayer\DAPauta.cs:línea 86
+   en BLLayer.BLPauta.selectPautasCanillas(BEPauta pauta) en D:\Oscar\FuentesPIv2\SIDWeb\BLLayer\BLPauta.cs:línea 93
+
+Additional Info:
+
+MachineName : L1PRC023
+TimeStamp : 26/03/2014 07:10:34 p.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 34c0b4ef-1-130403345902512304
+ThreadIdentity : COMERCIO\RAMPENOS
+WindowsIdentity : COMERCIO\RAMPENOS
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: L1PRC023
+
+App Domain: 34c0b4ef-1-130403345902512304
+
+ProcessId: 8148
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:11928
+
+----------------------------------------
+----------------------------------------
+Timestamp: 26/03/2014 07:10:42 p.m.
+
+Message: HandlingInstanceID: 1a387f1b-56dc-4215-bc71-2b72610d9eaf
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+03/26/2014 14:10:42
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_TB_PAUTA_TB_FORMULA_PAUTA". The conflict occurred in database "SIDD", table "dbo.TB_FORMULA_PAUTA", column 'DT_FECHA_PAUTA'.
+The statement has been terminated.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 25
+Number : 547
+Procedure : SP_LISTAR_PAUTAS_CANILLAS
+Server : .
+State : 0
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.SetMetaData(_SqlMetaDataSet metaData, Boolean moreInfo)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 460
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 846
+   en DALayer.DAPauta.selectPautasCanillas(BEPauta pauta) en D:\Oscar\FuentesPIv2\SIDWeb\DALayer\DAPauta.cs:línea 86
+   en BLLayer.BLPauta.selectPautasCanillas(BEPauta pauta) en D:\Oscar\FuentesPIv2\SIDWeb\BLLayer\BLPauta.cs:línea 93
+
+Additional Info:
+
+MachineName : L1PRC023
+TimeStamp : 26/03/2014 07:10:42 p.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 34c0b4ef-1-130403345902512304
+ThreadIdentity : COMERCIO\RAMPENOS
+WindowsIdentity : COMERCIO\RAMPENOS
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: L1PRC023
+
+App Domain: 34c0b4ef-1-130403345902512304
+
+ProcessId: 8148
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:10808
+
+----------------------------------------
+----------------------------------------
+Timestamp: 26/03/2014 07:10:49 p.m.
+
+Message: HandlingInstanceID: 30c47f2e-23f2-473f-b4dd-af8b6e0d9371
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+03/26/2014 14:10:49
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_TB_PAUTA_TB_FORMULA_PAUTA". The conflict occurred in database "SIDD", table "dbo.TB_FORMULA_PAUTA", column 'DT_FECHA_PAUTA'.
+The statement has been terminated.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 25
+Number : 547
+Procedure : SP_LISTAR_PAUTAS_CANILLAS
+Server : .
+State : 0
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.SetMetaData(_SqlMetaDataSet metaData, Boolean moreInfo)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteReader(DbCommand command, CommandBehavior cmdBehavior) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 460
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteReader(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 846
+   en DALayer.DAPauta.selectPautasCanillas(BEPauta pauta) en D:\Oscar\FuentesPIv2\SIDWeb\DALayer\DAPauta.cs:línea 86
+   en BLLayer.BLPauta.selectPautasCanillas(BEPauta pauta) en D:\Oscar\FuentesPIv2\SIDWeb\BLLayer\BLPauta.cs:línea 93
+
+Additional Info:
+
+MachineName : L1PRC023
+TimeStamp : 26/03/2014 07:10:49 p.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 34c0b4ef-1-130403345902512304
+ThreadIdentity : COMERCIO\RAMPENOS
+WindowsIdentity : COMERCIO\RAMPENOS
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: L1PRC023
+
+App Domain: 34c0b4ef-1-130403345902512304
+
+ProcessId: 8148
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:11928
+
+----------------------------------------
