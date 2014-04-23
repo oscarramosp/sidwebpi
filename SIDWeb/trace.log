@@ -1036,3 +1036,271 @@ Thread Name:
 Win32 ThreadId:11928
 
 ----------------------------------------
+----------------------------------------
+Timestamp: 08/04/2014 08:52:48 p.m.
+
+Message: HandlingInstanceID: a0601a0c-0867-40a8-bf8b-a3ab7fcb6ea4
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+04/08/2014 15:52:48
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Incorrect syntax near the keyword 'ELSE'.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 15
+LineNumber : 1
+Number : 156
+Procedure : 
+Server : .
+State : 1
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAFormula.validarFormula(BEFormula formula) en D:\Oscar\FuentesPIv2\SIDWeb\DALayer\DAFormula.cs:línea 24
+
+Additional Info:
+
+MachineName : L1PRC023
+TimeStamp : 08/04/2014 08:52:48 p.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 34c0b4ef-1-130414577233264740
+ThreadIdentity : COMERCIO\RAMPENOS
+WindowsIdentity : COMERCIO\RAMPENOS
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: L1PRC023
+
+App Domain: 34c0b4ef-1-130414577233264740
+
+ProcessId: 14520
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:14572
+
+----------------------------------------
+----------------------------------------
+Timestamp: 08/04/2014 08:53:13 p.m.
+
+Message: HandlingInstanceID: bfc2d491-b52f-4d84-a172-46b616dd78a9
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+04/08/2014 15:53:13
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Divide by zero error encountered.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 1
+Number : 8134
+Procedure : 
+Server : .
+State : 1
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAFormula.validarFormula(BEFormula formula) en D:\Oscar\FuentesPIv2\SIDWeb\DALayer\DAFormula.cs:línea 24
+
+Additional Info:
+
+MachineName : L1PRC023
+TimeStamp : 08/04/2014 08:53:13 p.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 34c0b4ef-1-130414577233264740
+ThreadIdentity : COMERCIO\RAMPENOS
+WindowsIdentity : COMERCIO\RAMPENOS
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: L1PRC023
+
+App Domain: 34c0b4ef-1-130414577233264740
+
+ProcessId: 14520
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:14572
+
+----------------------------------------
+----------------------------------------
+Timestamp: 08/04/2014 08:54:58 p.m.
+
+Message: HandlingInstanceID: 7d336134-0f64-4e16-be43-21aaa0149255
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+04/08/2014 15:54:58
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Invalid column name 'IN_CANTIDAD_PRYECTADA'.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 1
+Number : 207
+Procedure : 
+Server : .
+State : 1
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAFormula.validarFormula(BEFormula formula) en D:\Oscar\FuentesPIv2\SIDWeb\DALayer\DAFormula.cs:línea 24
+
+Additional Info:
+
+MachineName : L1PRC023
+TimeStamp : 08/04/2014 08:54:58 p.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 34c0b4ef-1-130414577233264740
+ThreadIdentity : COMERCIO\RAMPENOS
+WindowsIdentity : COMERCIO\RAMPENOS
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: L1PRC023
+
+App Domain: 34c0b4ef-1-130414577233264740
+
+ProcessId: 14520
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:14572
+
+----------------------------------------
+----------------------------------------
+Timestamp: 15/04/2014 09:41:39 p.m.
+
+Message: HandlingInstanceID: f425512d-e7f1-44f3-8e5a-3b2286c01734
+An exception of type 'System.Data.SqlClient.SqlException' occurred and was caught.
+----------------------------------------------------------------------------------
+04/15/2014 16:41:39
+Type : System.Data.SqlClient.SqlException, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Divide by zero error encountered.
+Source : .Net SqlClient Data Provider
+Help link : 
+Errors : System.Data.SqlClient.SqlErrorCollection
+Class : 16
+LineNumber : 1
+Number : 8134
+Procedure : 
+Server : .
+State : 1
+ErrorCode : -2146232060
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void OnError(System.Data.SqlClient.SqlException, Boolean)
+Stack Trace :    en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 443
+   en Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command) en e:\Builds\EntLib\Latest\Source\Blocks\Data\Src\Data\Database.cs:línea 714
+   en DALayer.DAFormula.validarFormula(BEFormula formula) en D:\Oscar\FuentesPIv2\SIDWeb\DALayer\DAFormula.cs:línea 24
+
+Additional Info:
+
+MachineName : L1PRC023
+TimeStamp : 15/04/2014 09:41:39 p.m.
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : 34c0b4ef-1-130420716654856778
+ThreadIdentity : COMERCIO\RAMPENOS
+WindowsIdentity : COMERCIO\RAMPENOS
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: L1PRC023
+
+App Domain: 34c0b4ef-1-130420716654856778
+
+ProcessId: 3676
+
+Process Name: C:\Program Files (x86)\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.exe
+
+Thread Name: 
+
+Win32 ThreadId:8236
+
+----------------------------------------
